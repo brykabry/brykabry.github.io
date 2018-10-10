@@ -84,3 +84,14 @@ body, html {
     position: absolute;
     margin-left: -550px;
 }
+
+.download-label{
+    top: 25%;
+}
+.elevel-o-o{
+    font-size: 3em;
+}
+.eleven-o-one{
+    top: 50%;
+    font-size: 3em;
+}
