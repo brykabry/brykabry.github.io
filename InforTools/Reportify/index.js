@@ -39,7 +39,7 @@ $(document).ready(function(){
                 console.log("checkpoint! research about cors!")
                 $.ajax({
                     url: "http://wiki.lawson.com/display/HCM/Human+Capital+Management+Servers",
-                    headers: {  'Access-Control-Allow-Origin': 'htt://site allowed to access' },
+                    headers: {  'Access-Control-Allow-Origin': 'https://brykabry.github.io' },
                     dataType: 'json',
                     /* etc */
                     success: function(jsondata){
