@@ -10,6 +10,9 @@ $(document).ready(function(){
                     $(".borderright").css({"margin-top":"105px"});
                     $(".borderleft").css({"margin-top":"-105px"});
                     $(".bordertop").css({"margin-left":"550px"});    
+                }).on("click",function(){
+                    $(".title-wrapper").css({"transform":"scale(2)"});
+                    setTimeout(function(){$(".title-wrapper").css({"transform":"scale(0)"})},400);
                 })
               
            }
