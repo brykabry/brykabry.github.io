@@ -39,7 +39,7 @@ body, html {
 }
 .bordertop{
     /* width: 550px; */
-    transition: width .2s;
+    transition: width .1s;
     width: 0;
     height: 5px;
     color: white;
@@ -48,7 +48,7 @@ body, html {
 .borderleft{
     width: 5px;
     /* height: 100px; */
-    transition: height .2s;
+    transition: height .1s;
     height: 0px;
     color: white;
     background-color: white;
@@ -57,7 +57,7 @@ body, html {
 .borderright{
     width: 5px;
     /* height: 100px; */
-    transition: height .2s;
+    transition: height .1s;
     height: 0px;
     color: white;
     background-color: white;
@@ -65,7 +65,7 @@ body, html {
 }
 .borderbottom{
     /* width: 550px; */
-    transition: width .2s;
+    transition: width .1s;
     width: 0;
     height: 5px;
     color: white;
