@@ -2,17 +2,18 @@ $(document).ready(function(){
     var brykabry = {
         events:{
             init:function(){
-                brykabry.events.animateBorder();
-                $(".title-wrapper").on("click",function(){
+                brykabry.events.animateBorder(".reportify");
+                $(".title-wrapper.reportify").on("click",function(){
                     $(".title-wrapper.reportify").css({"transform":"scale(1.5)"}).on("mouseleave",function(){$(".borderbottom, .bordertop").css({"margin-left":"0"});$(".borderright, .borderleft").css({"margin-top":"0"});});
                     setTimeout(function(){$(".title-wrapper.reportify").css({"transform":"scale(0)"})},200);
-                    brykabry.events.showDownload();
+                    setTimeout(function(){brykabry.events.showDownload();},400);
                 })
             },
-            animateBorder:function(){
-                $(".title-wrapper").css({"transform":"scale(1.5)"})
-                setTimeout(function(){$(".title-wrapper").css({"transform":"scale(1)"})},200);
-                $(".title-wrapper").on("mouseenter",function(){
+            animateBorder:function(labelclass){
+                var className = ".title-wrapper" + labelclass;
+                $(className).css({"transform":"scale(1.5)"})
+                setTimeout(function(){$(className).css({"transform":"scale(1)"})},200);
+                $(className).on("mouseenter",function(){
                     $(".borderbottom, .bordertop").css({"margin-left":"0"});
                     $(".borderright, .borderleft").css({"margin-top":"0"});
                 }).on("mouseleave",function(){
@@ -23,7 +24,7 @@ $(document).ready(function(){
                 })
             },
             showDownload:function(){
-                brykabry.events.animateBorder();
+                brykabry.events.animateBorder(".download");
                 $(".title-wrapper.download").css({"transform":"scale(1.5)"})
                 setTimeout(function(){$(".title-wrapper.download").css({"transform":"scale(1)"})},200);
             }
