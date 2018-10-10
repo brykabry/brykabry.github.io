@@ -48,10 +48,7 @@ $(document).ready(function(){
                 alert("Generating a report might take a while. Press OK to continue.");
                 var url = "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now();
                 var server= "http://wiki.lawson.com/display/HCM/Human+Capital+Management+Servers"
-                ajax("getCurrentServerBuild",server);
-                ajax("init",url);
-
-                var ajax = function(){
+                var ajax = function(key, url){
                     var xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState == XMLHttpRequest.DONE) {
@@ -88,6 +85,8 @@ $(document).ready(function(){
                     xhr.open('GET', url, true);
                     xhr.send(null);
                 }
+                ajax("getCurrentServerBuild",server);
+                ajax("init",url);
                     
 
 
