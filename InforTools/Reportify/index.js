@@ -36,7 +36,7 @@ $(document).ready(function(){
                 })
             },
             download:function(){
-                $.ajax({
+                $.cors({
                     type: 'GET',
                     crossDomain: true,
                     dataType: 'jsonp',
