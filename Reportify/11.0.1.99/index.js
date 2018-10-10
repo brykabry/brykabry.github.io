@@ -24,7 +24,7 @@ $(document).ready(function(){
 
     var img = new Image();
     img.onload = function() {
-        brykabry.events.init();
+        setTimeout(function(){brykabry.events.init()},500);
     }
     img.src = url;
     if (img.complete) img.onload();
