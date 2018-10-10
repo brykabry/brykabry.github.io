@@ -30,9 +30,12 @@ $(document).ready(function(){
             },
             showDownload:function(){
                 brykabry.events.animateBorder(".download");
-                $(".title-wrapper.download").css({"transform":"scale(1.5)"})
                 setTimeout(function(){$(".title-wrapper.download").css({"transform":"scale(1)"})},200);
+            },
+            download:function(){
+
             }
+            
         }
     }
     var src = $('.bg').css('background-image');
