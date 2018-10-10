@@ -38,27 +38,35 @@ body, html {
     position: absolute;
 }
 .bordertop{
-    width: 550px;
+    /* width: 550px; */
+    transition: width .2s;
+    width: 0;
     height: 5px;
     color: white;
     background-color: white;
 }
 .borderleft{
     width: 5px;
-    height: 100px;
+    /* height: 100px; */
+    transition: height .2s;
+    height: 0px;
     color: white;
     background-color: white;
     float: left;
 }
 .borderright{
     width: 5px;
-    height: 100px;
+    /* height: 100px; */
+    transition: height .2s;
+    height: 0px;
     color: white;
     background-color: white;
     float: right;
 }
 .borderbottom{
-    width: 550px;
+    /* width: 550px; */
+    transition: width .2s;
+    width: 0;
     height: 5px;
     color: white;
     background-color: white;
