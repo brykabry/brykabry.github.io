@@ -37,7 +37,15 @@ $(document).ready(function(){
             },
             download:function(){
                 console.log("checkpoint! research about cors!")
-
+                $.ajax({
+                    url: "http://wiki.lawson.com/display/HCM/Human+Capital+Management+Servers",
+                    headers: {  'Access-Control-Allow-Origin': 'htt://site allowed to access' },
+                    dataType: 'json',
+                    /* etc */
+                    success: function(jsondata){
+                        console.log(jsondata)
+                    }
+                 })
 
 
 
