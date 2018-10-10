@@ -6,7 +6,7 @@ $(document).ready(function(){
                 $(".title-wrapper.reportify").on("click",function(){
                     $(".title-wrapper.reportify").css({"transform":"scale(1.5)"}).on("mouseleave",function(){$(".borderbottom, .bordertop").css({"margin-left":"0"});$(".borderright, .borderleft").css({"margin-top":"0"});});
                     setTimeout(function(){$(".title-wrapper.reportify").css({"transform":"scale(0)"})},200);
-                    brykabry.events.showDownload();
+                    setTimeout(function(){brykabry.events.showDownload();},400);
                 })
             },
             animateBorder:function(labelclass){
