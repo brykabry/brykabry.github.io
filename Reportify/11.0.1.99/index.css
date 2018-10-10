@@ -45,6 +45,7 @@ body, html {
     height: 5px;
     color: white;
     background-color: white;
+    margin-left: 550px;
 }
 .borderleft{
     width: 5px;
