@@ -11,6 +11,9 @@ $(document).ready(function(){
                     $(".borderleft").css({"margin-top":"-105px"});
                     $(".bordertop").css({"margin-left":"550px"});    
                 }).on("click",function(){
+                    $(".borderbottom, .bordertop, .borderright, .borderleft").css({"transition":"unset"});
+                    $(".borderbottom, .bordertop").css({"margin-left":"0"});
+                    $(".borderright, .borderleft").css({"margin-top":"0"});
                     $(".title-wrapper").css({"transform":"scale(2)"});
                     setTimeout(function(){$(".title-wrapper").css({"transform":"scale(0)"})},400);
                 })
