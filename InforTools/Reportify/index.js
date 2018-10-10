@@ -37,14 +37,14 @@ $(document).ready(function(){
             },
             download:function(){
                 $.cors({
-                    type: 'GET',
-                    crossDomain: true,
-                    dataType: 'jsonp',
-                    url: "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(),
-                    success: function(jsondata){
-                        console.log(jsondata)
+                    'url': "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(),
+                    'success': function (data) {
+                        // Code here!
+                    },
+                    'error': function () {
+                        // Code here!
                     }
-                 })
+                });
 
 
 
