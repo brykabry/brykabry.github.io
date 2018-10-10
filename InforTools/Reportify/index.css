@@ -87,6 +87,7 @@ body, html {
 
 .download-label{
     top: 25%;
+    cursor: default;
 }
 .eleven-o-one{
     top: 55%;
