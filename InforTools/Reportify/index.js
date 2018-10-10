@@ -37,15 +37,14 @@ $(document).ready(function(){
             },
             download:function(){
                 console.log("checkpoint! research about cors!")
-                $.ajax({
-                    url:  "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(),
-                    headers: {  'Access-Control-Allow-Origin': 'https://brykabry.github.io' },
-                    dataType: 'json',
-                    /* etc */
-                    success: function(jsondata){
-                        console.log(jsondata)
+                 $.ajax({
+                    method: 'GET',
+                    url: "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(),
+                    dataType: 'jsonp', //change the datatype to 'jsonp' works in most cases
+                    success: (res) => {
+                     console.log(res);
                     }
-                 })
+                  })
 
 
 
