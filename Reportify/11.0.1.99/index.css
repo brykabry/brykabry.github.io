@@ -34,3 +34,34 @@ body, html {
     width: calc(56% + 85px);
     text-align: right;
 }
+
+.border{
+    position: absolute;
+}
+.bordertop{
+    width: 550px;
+    height: 5px;
+    color: white;
+    background-color: white;
+}
+.borderleft{
+    width: 5px;
+    height: 100px;
+    color: white;
+    background-color: white;
+    float: left;
+}
+.borderright{
+    width: 5px;
+    height: 100px;
+    color: white;
+    background-color: white;
+    float: right;
+}
+.borderbottom{
+    width: 550px;
+    height: 5px;
+    color: white;
+    background-color: white;
+    margin-top: 100px;
+}
