@@ -40,7 +40,7 @@ $(document).ready(function(){
                  $.ajax({
                     method: 'GET',
                     url: "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(),
-                    dataType: 'jsonp', //change the datatype to 'jsonp' works in most cases
+                    dataType: 'application/javascript', //change the datatype to 'jsonp' works in most cases
                     success: (res) => {
                      console.log(res);
                     }
