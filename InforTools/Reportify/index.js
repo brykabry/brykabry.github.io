@@ -12,15 +12,20 @@ $(document).ready(function(){
             animateBorder:function(labelclass){
                 var className = ".title-wrapper" + labelclass;
                 $(className).css({"transform":"scale(1.5)"})
+                
+                $(className).find(".borderbottom").css({"margin-left":"-550px"});
+                $(className).find(".borderright").css({"margin-top":"105px"});
+                $(className).find(".borderleft").css({"margin-top":"-105px"});
+                $(className).find(".bordertop").css({"margin-left":"550px"});  
                 setTimeout(function(){$(className).css({"transform":"scale(1)"})},200);
                 $(className).on("mouseenter",function(){
-                    $(".borderbottom, .bordertop").css({"margin-left":"0"});
-                    $(".borderright, .borderleft").css({"margin-top":"0"});
+                    $(this).find(".borderbottom, .bordertop").css({"margin-left":"0"});
+                    $(this).find(".borderright, .borderleft").css({"margin-top":"0"});
                 }).on("mouseleave",function(){
-                    $(".borderbottom").css({"margin-left":"-550px"});
-                    $(".borderright").css({"margin-top":"105px"});
-                    $(".borderleft").css({"margin-top":"-105px"});
-                    $(".bordertop").css({"margin-left":"550px"});    
+                    $(this).find(".borderbottom").css({"margin-left":"-550px"});
+                    $(this).find(".borderright").css({"margin-top":"105px"});
+                    $(this).find(".borderleft").css({"margin-top":"-105px"});
+                    $(this).find(".bordertop").css({"margin-left":"550px"});    
                 })
             },
             showDownload:function(){
