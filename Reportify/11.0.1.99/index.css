@@ -28,7 +28,8 @@ body, html {
     left:calc(50% - 275px);
     overflow:hidden;
     cursor: pointer;
-    transition:transform .4s;
+    transform:scale(0);
+    transition:transform .2s;
 }
 .author{
     font-size:14px !important;

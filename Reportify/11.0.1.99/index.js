@@ -1,7 +1,9 @@
 $(document).ready(function(){
     var brykabry = {
         events:{
-           init:function(){
+            init:function(){
+                $(".title-wrapper").css({"transform":"scale(1.5)"})
+                setTimeout(function(){$(".title-wrapper").css({"transform":"scale(1)"})},200);
                 $(".title-wrapper").on("mouseenter",function(){
                     $(".borderbottom, .bordertop").css({"margin-left":"0"});
                     $(".borderright, .borderleft").css({"margin-top":"0"});
@@ -11,11 +13,10 @@ $(document).ready(function(){
                     $(".borderleft").css({"margin-top":"-105px"});
                     $(".bordertop").css({"margin-left":"550px"});    
                 }).on("click",function(){
-                    $(".title-wrapper").css({"transform":"scale(2)"}).on("mouseleave",function(){$(".borderbottom, .bordertop").css({"margin-left":"0"});$(".borderright, .borderleft").css({"margin-top":"0"});});
-                    setTimeout(function(){$(".title-wrapper").css({"transform":"scale(0)"})},400);
+                    $(".title-wrapper").css({"transform":"scale(1.5)"}).on("mouseleave",function(){$(".borderbottom, .bordertop").css({"margin-left":"0"});$(".borderright, .borderleft").css({"margin-top":"0"});});
+                    setTimeout(function(){$(".title-wrapper").css({"transform":"scale(0)"})},200);
                 })
-              
-           }
+            }
             
         }
     }
