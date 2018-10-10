@@ -27,6 +27,7 @@ body, html {
     width:550px;
     left:calc(50% - 275px);
     overflow:hidden;
+    cursor: pointer;
 }
 .author{
     font-size:14px !important;
