@@ -52,33 +52,32 @@ $(document).ready(function(){
                     var xhr = new XMLHttpRequest();
                     xhr.onreadystatechange = function() {
                         if (xhr.readyState == XMLHttpRequest.DONE) {
-                        switch(key){
-                            case "init":
-                                global.xhr = xhr.responseText
-                                getLatestBuild();
-                            break;
-                            case "getIssueLists":
-                                global.issueList = JSON.parse(xhr.responseText).dataViewSet.data;
-                                global.issueCounter = global.issueList.length-1;
-                                getResolutionTickets();
-                            break;
-                            case "getResolutionTickets":
-                                getResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1])
-                            break;
-                            case "getResolutionDetails":
-                                if(global.issueCounter!=0){
-                                    addResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1]);
-                                    global.issueCounter--;                    
-                                }else{
-                                    addResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1]);
-                                    normalizeDataForDownload();
-                                }
-                            break;
-                            case "getCurrentServerBuild":
-                                global.currentServerBuild = xhr.responseText.toString().split("11.0.1.99.")[1].split("</td>")[0];
-                            break;
-                        }
-                            
+                            switch(key){
+                                case "init":
+                                    global.xhr = xhr.responseText
+                                    getLatestBuild();
+                                break;
+                                case "getIssueLists":
+                                    global.issueList = JSON.parse(xhr.responseText).dataViewSet.data;
+                                    global.issueCounter = global.issueList.length-1;
+                                    getResolutionTickets();
+                                break;
+                                case "getResolutionTickets":
+                                    getResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1])
+                                break;
+                                case "getResolutionDetails":
+                                    if(global.issueCounter!=0){
+                                        addResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1]);
+                                        global.issueCounter--;                    
+                                    }else{
+                                        addResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1]);
+                                        normalizeDataForDownload();
+                                    }
+                                break;
+                                case "getCurrentServerBuild":
+                                    global.currentServerBuild = xhr.responseText.toString().split("11.0.1.99.")[1].split("</td>")[0];
+                                break;
+                            }
                         }
                        
                     }
