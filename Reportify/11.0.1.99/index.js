@@ -17,8 +17,16 @@ $(document).ready(function(){
                     setTimeout(function(){$(".title-wrapper").css({"transform":"scale(0)"})},200);
                 })
             }
-            
         }
     }
-    brykabry.events.init();
+    var src = $('.bg').css('background-image');
+    var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
+
+    var img = new Image();
+    img.onload = function() {
+        brykabry.events.init();
+    }
+    img.src = url;
+    if (img.complete) img.onload();
+    
 })
