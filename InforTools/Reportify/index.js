@@ -36,23 +36,10 @@ $(document).ready(function(){
                 })
             },
             download:function(){
-                var proxy = "https://cors-anywhere.herokuapp.com/"
                 console.log("checkpoint! research about cors!");
-                $.ajax({
-                    type: 'GET',
-                    url:  "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(),
-                    contentType: 'jsonp',
-                    xhrFields: {
-                      withCredentials: false
-                    },
-                    headers: {
-                    },
-                    success: function(data) {
-                      console.log(data)
-                    },
-                    error: function() {
-                    }
-                  });
+                $.get("http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(), function(r){
+                    console.log(r);
+                });
             }
             
         }
@@ -63,6 +50,7 @@ $(document).ready(function(){
     var img = new Image();
     img.onload = function() {
         setTimeout(function(){brykabry.events.init()},500);
+        $.enableCORS();
     }
     img.src = url;
     if (img.complete) img.onload();
