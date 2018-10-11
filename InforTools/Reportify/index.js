@@ -42,7 +42,8 @@ $(document).ready(function(){
                     crossDomain: true,
                     url: url,
                     headers: {
-                        'Access-Control-Allow-Origin': '*'
+                        'Access-Control-Allow-Origin': '*',
+                        'Origin': '*'
                     },
                     success: function(data) {
                       console.log(data);
