@@ -38,16 +38,51 @@ $(document).ready(function(){
             download:function(){
                 console.log("checkpoint! research about cors!");
                 var url = "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=";
-                $.ajax({
-                    url: url,
-                    dataType: "application/javascript",
-                    success: function(data) {
-                      console.log(data);
-                    },
-                    error:function(e){
-                        console.log(e)
+                var w = window.open();
+                var html = `<script>
+                var server= "http://wiki.lawson.com/display/HCM/Human+Capital+Management+Servers"
+                ajax("getCurrentServerBuild",server);
+                function ajax(key, url){
+                    var xhr = new XMLHttpRequest();
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                          switch(key){
+                            case "init":
+                              global.xhr = xhr.responseText
+                              getLatestBuild();
+                            break;
+                            case "getIssueLists":
+                              global.issueList = JSON.parse(xhr.responseText).dataViewSet.data;
+                              global.issueCounter = global.issueList.length-1;
+                              getResolutionTickets();
+                            break;
+                            case "getResolutionTickets":
+                              getResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1])
+                            break;
+                            case "getResolutionDetails":
+                              if(global.issueCounter!=0){
+                                addResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1]);
+                                global.issueCounter--;                    
+                              }else{
+                                addResolutionDetails(JSON.parse(xhr.responseText),url.split("http://jira.lawson.com/rest/api/2/issue/")[1]);
+                                normalizeDataForDownload();
+                              }
+                            break;
+                            case "getCurrentServerBuild":
+                            debugger;
+                              global.currentServerBuild = xhr.responseText.toString().split("11.0.1.99.")[1].split("</td>")[0];
+                            break;
+                          }
+                          
+                        }
                     }
-                  });
+                    xhr.open('GET', url, true);
+                    xhr.send(null);
+            
+                  }
+                </script>`
+              
+                $(w.document.body).html(html);
             }
             
         }
