@@ -37,9 +37,14 @@ $(document).ready(function(){
             },
             download:function(){
                 console.log("checkpoint! research about cors!");
-                $.get("http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=" + Date.now(), function(r){
-                    console.log(r);
-                });
+                var url = "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=";
+                $.ajax({
+                    crossOrigin: true,
+                    url: url,
+                    success: function(data) {
+                      console.log(data);
+                    }
+                  });
             }
             
         }
