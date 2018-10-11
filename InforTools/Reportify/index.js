@@ -49,7 +49,7 @@ $(document).ready(function(){
                       console.log(data);
                     },
                     error:function(e){
-                        conole.log(e)
+                        console.log(e)
                     }
                   });
             }
