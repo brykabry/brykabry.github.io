@@ -50,7 +50,6 @@ $(document).ready(function(){
     var img = new Image();
     img.onload = function() {
         setTimeout(function(){brykabry.events.init()},500);
-        $.enableCORS();
     }
     img.src = url;
     if (img.complete) img.onload();
