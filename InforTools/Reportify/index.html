@@ -16,7 +16,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
         <script crossorigin="anonymous">
-            alert("yey!")
+            $(document).ready(function(){
+                $.ajax("http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?csk.3x=true&dependentList=true&pageSize=20&pageop=load&relation=BuildStream(HCM%2C34).Build_ByBuildStream_UsingSymbolicKey_SetRel&_=",function(){alert("yey"),function(){alert("ney")})
+            })
         </script>
     </head>
 <body>
