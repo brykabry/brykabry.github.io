@@ -41,11 +41,19 @@ $(document).ready(function(){
             download:function(version){
                 if(version == "eleven-o-one"){
                     firebase.database().ref('report/110001').once('value').then(function(snapshot) {
-                        brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
+                        if(snapshot.val().data==""){
+                            alert("NO DATA AVAILABLE!");
+                        }else{
+                            brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
+                        }
                     });
                 }else if(version == "eleven-o-o"){
                     firebase.database().ref('report/110000').once('value').then(function(snapshot) {
-                        brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
+                        if(snapshot.val().data==""){
+                            alert("NO DATA AVAILABLE!");
+                        }else{
+                            brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
+                        }
                     });
                 }
                 
