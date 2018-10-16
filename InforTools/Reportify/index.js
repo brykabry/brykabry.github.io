@@ -35,11 +35,13 @@ $(document).ready(function(){
                     brykabry.events.download("eleven-o-one");
                 })
             },
-            download:function(){
-                console.log("checkpoint! research about cors!");
-                firebase.database().ref('report/110001').once('value').then(function(snapshot) {
-                    JSONToCSVConvertor(snapshot.val().data,"", true)
-                });
+            download:function(version){
+                if(version == "eleven-o-one"){
+                    console.log("checkpoint! research about cors!");
+                    firebase.database().ref('report/110001').once('value').then(function(snapshot) {
+                        brykabry.events.JSONToCSVConvertor(snapshot.val().data,"", true)
+                    });
+                }
             },
             JSONToCSVConvertor:function (JSONData, ReportTitle, ShowLabel) {
                 var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
