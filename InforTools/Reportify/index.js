@@ -37,7 +37,6 @@ $(document).ready(function(){
             },
             download:function(version){
                 if(version == "eleven-o-one"){
-                    console.log("checkpoint! research about cors!");
                     firebase.database().ref('report/110001').once('value').then(function(snapshot) {
                         brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
                     });
