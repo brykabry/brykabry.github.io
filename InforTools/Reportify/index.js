@@ -34,13 +34,21 @@ $(document).ready(function(){
                 $(".download.eleven-o-one").on("click",function(){
                     brykabry.events.download("eleven-o-one");
                 })
+                $(".download.eleven-o-o").on("click",function(){
+                    brykabry.events.download("eleven-o-o");
+                })
             },
             download:function(version){
                 if(version == "eleven-o-one"){
                     firebase.database().ref('report/110001').once('value').then(function(snapshot) {
                         brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
                     });
+                }else if(version == "eleven-o-o"){
+                    firebase.database().ref('report/110000').once('value').then(function(snapshot) {
+                        brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
+                    });
                 }
+                
             },
             JSONToCSVConvertor:function (JSONData, ReportTitle, ShowLabel) {
                 var arrData = typeof JSONData != 'object' ? JSON.parse(JSONData) : JSONData;
