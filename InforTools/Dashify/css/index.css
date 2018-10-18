@@ -1,0 +1,18 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: "apercu",sans-serif;
+    overflow: hidden;
+}
+.bg {
+    background-image: url("../src/img/dashify.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay{
+    background-color: black;
+    height: 100%;
+    opacity: .8;
+}
