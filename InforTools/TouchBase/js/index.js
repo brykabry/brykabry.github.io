@@ -10,14 +10,6 @@ $(document).ready(function(){
     if (img.complete) img.onload();
 
 
-
-
-
-
-
-
-
-
     var tb = {
         events:{
             showTitle:function(){

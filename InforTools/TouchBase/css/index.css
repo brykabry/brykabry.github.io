@@ -31,7 +31,7 @@ body, html {
 .touchbaselabel .label {
     overflow: hidden;
     position: relative;
-    padding-left: 20px;
+    padding-left: 10px;
     height: 65px;
     cursor: pointer;
     transition: all .2s
