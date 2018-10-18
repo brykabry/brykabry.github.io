@@ -14,7 +14,7 @@ $(document).ready(function(){
     img.onload = function() {
         setTimeout(function(){
             tb.events.showTitle();
-        },750)
+        },1250)
         
     }
     img.src = url;
@@ -27,12 +27,13 @@ $(document).ready(function(){
                 var timeout = 375;
                 var blinker = $(".label.blinker");
                 blinker
-                .delay(timeout).qcss({"visibility":"visible"})
-                .delay(timeout).qcss({"visibility":"hidden"})
-                .delay(timeout).qcss({"visibility":"visible"})
-                .delay(timeout).qcss({"visibility":"hidden","height":"0"})
+                .delay(timeout).qcss({"opacity":"1"})
+                .delay(timeout).qcss({"opacity":"0"})
+                .delay(timeout).qcss({"opacity":"1"})
+                .delay(timeout).qcss({"opacity":"0","height":"0"})
                 // .delay(timeout).qcss({"visibility":"visible"})
-                .delay(timeout).qcss({"visibility":"visible","height":"60px"})
+                .delay(timeout).qcss({"opacity":"1","height":"60px"})
+                .delay(timeout).qcss({"border-left":"3px solid white"})
                 var touchbase = $(".label.touchbase .wrapper");
                 touchbase.delay((timeout*5)+timeout).qcss({"margin-left":"0"})
 
