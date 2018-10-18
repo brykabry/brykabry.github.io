@@ -46,7 +46,7 @@ body, html {
     display: inline-block;
     margin-left: -500px;
     width: 500px;
-    transition: all 2s;
+    transition: all 1.5s;
 }
 .touchbaselabel .label.ats div.letters{
     margin-right: 20px;
@@ -55,6 +55,7 @@ body, html {
 }
 
 .touchbaselabel .label.blinker{
-    height: 4px;
+    height: 3px;
+    visibility:hidden;
     border-left: 3px solid white;
     }
