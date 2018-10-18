@@ -13,8 +13,9 @@ $(document).ready(function(){
     var img = new Image();
     img.onload = function() {
         setTimeout(function(){
+            $(".touchbaselabel .label.ats div.letters").qcss({"opacity":"1"})
             tb.events.showTitle();
-        },1250)
+        },0)
         
     }
     img.src = url;
@@ -27,7 +28,7 @@ $(document).ready(function(){
                 var timeout = 375;
                 var blinker = $(".label.blinker");
                 blinker
-                .delay(timeout).qcss({"opacity":"1"})
+                .delay(1500).qcss({"opacity":"1"})
                 .delay(timeout).qcss({"opacity":"0"})
                 .delay(timeout).qcss({"opacity":"1"})
                 .delay(timeout).qcss({"opacity":"0","height":"0"})
@@ -35,7 +36,7 @@ $(document).ready(function(){
                 .delay(timeout).qcss({"opacity":"1","height":"60px"})
                 .delay(timeout).qcss({"border-left":"3px solid white"})
                 var touchbase = $(".label.touchbase .wrapper");
-                touchbase.delay((timeout*5)+timeout).qcss({"margin-left":"0"})
+                touchbase.delay((timeout*8)+timeout).qcss({"margin-left":"0"})
 
                 
             }

@@ -54,6 +54,8 @@ body, html {
     font-size: 3em;
     float: left;
     font-weight: 700;
+    opacity: 0;
+
 }
 
 .touchbaselabel .label.blinker{
