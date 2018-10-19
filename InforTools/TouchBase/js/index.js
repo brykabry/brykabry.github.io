@@ -45,7 +45,11 @@ $(document).ready(function(){
             hideTitle:function(){
                 $(".touchbaselabel .label.ats .wrapper").css({"margin-right":"-153px"});
                 $(".touchbaselabel .label.touchbase .wrapper").css({"margin-left":"-375px"});
-                $(".label.blinker").delay(1000).qcss({"height":"0"})
+                $(".label.blinker").delay(1000).qcss({"height":"0"});
+                tb.events.showMenu();
+            },
+            showMenu:function(){
+                alert("yey!");
             }
                 
         }
