@@ -21,7 +21,11 @@
             src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
-        <script src="js/index.js"></script>
+        <script type="text/javascript">
+            var script = document.createElement("script");
+                script.setAttribute("src", "js/index.js?_"+Date.now());
+                document.head.appendChild(script);
+        </script>
         <link rel="stylesheet" href="css/index.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->

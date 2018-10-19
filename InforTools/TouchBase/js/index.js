@@ -39,7 +39,7 @@ $(document).ready(function(){
                 touchbase.delay((timeout*7)+timeout).qcss({"margin-left":"0"})
 
                 $(".touchbaselabel .label").on("click",function(){
-
+                    tb.events.hideTitle();
                 })
             },
             hideTitle:function(){
