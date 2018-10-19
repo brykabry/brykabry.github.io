@@ -25,6 +25,7 @@ $(document).ready(function(){
     var tb = {
         events:{
             showTitle:function(){
+                //opening animation
                 var timeout = 375;
                 var blinker = $(".label.blinker");
                 blinker
@@ -32,14 +33,19 @@ $(document).ready(function(){
                 .delay(timeout).qcss({"opacity":"0"})
                 .delay(timeout).qcss({"opacity":"1"})
                 .delay(timeout).qcss({"opacity":"0","height":"0"})
-                // .delay(timeout).qcss({"visibility":"visible"})
                 .delay(timeout).qcss({"opacity":"1","height":"60px"})
                 .delay(timeout).qcss({"border-left":"3px solid white"})
                 var touchbase = $(".label.touchbase .wrapper");
                 touchbase.delay((timeout*7)+timeout).qcss({"margin-left":"0"})
 
-                
+                $(".touchbaselabel .label").on("click",function(){
+
+                })
+            },
+            hideTitle:function(){
+                alert("yey")
             }
+                
         }
     }
 })
