@@ -31,10 +31,13 @@ body, html {
 .touchbaselabel .label {
     overflow: hidden;
     position: relative;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     height: 65px;
     cursor: pointer;
     transition: all .2s
+}
+.touchbaselabel .label.touchbase {
+    margin-left:20px;
 }
 .touchbaselabel .label.touchbase div.letters{
     margin-right: 20px;
@@ -47,7 +50,13 @@ body, html {
     display: inline-block;
     margin-left: -375px;
     width: 375px;
-    transition: all 1.5s;
+    transition: all 1s;
+}
+.touchbaselabel .label.ats .wrapper{
+    display: inline-block;
+    transition: all 1s;
+    width: 153px;
+    /* margin-right: -152px; */
 }
 .touchbaselabel .label.ats div.letters{
     margin-right: 20px;

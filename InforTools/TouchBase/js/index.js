@@ -43,7 +43,9 @@ $(document).ready(function(){
                 })
             },
             hideTitle:function(){
-                alert("yey")
+                $(".touchbaselabel .label.ats .wrapper").css({"margin-right":"-153px"});
+                $(".touchbaselabel .label.touchbase .wrapper").css({"margin-left":"-375px"});
+                $(".label.blinker").delay(1000).qcss({"height":"0"})
             }
                 
         }
