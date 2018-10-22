@@ -53,7 +53,9 @@ $(document).ready(function(){
                 
             },
             showMenu:function(){
-                alert("yey!");
+                $(".hamburger").delay(200).qcss({"opacity":"1"})
+                $(".hamburger.1").delay(400).qcss({"margin-top":"0"})
+                $(".hamburger.2").delay(400).qcss({"margin-top":"20px"})
             }
                 
         }

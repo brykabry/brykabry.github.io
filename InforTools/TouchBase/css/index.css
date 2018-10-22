@@ -72,4 +72,27 @@ body, html {
     opacity:0;
     border-left: 5px solid white;
     transition: all .250s;
-    }
+}
+
+.settings-wrapper{
+    position: absolute;
+    color: white;
+    top: 0;
+    margin: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    
+}
+.settings-wrapper .settings{
+    position: relative;
+    
+}
+.settings-wrapper .hamburger{
+    border-bottom: 3px solid white;
+    position: absolute;
+    width: 35px;
+    opacity: 0;
+    margin-top: 10px;
+    transition: all .2s;
+}
