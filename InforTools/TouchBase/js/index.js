@@ -53,27 +53,30 @@ $(document).ready(function(){
                 $(".content-wrapper").delay(2000).qcss({"display":"block"})
                 
                 $(".qa-background").delay(2050).qcss({"margin-top":"0"})
-                $(".dev-background").delay(2100).qcss({"margin-top":"0"})
+                $(".dev-background").delay(2150).qcss({"margin-top":"0"})
+                
                 setTimeout(function(){
                     $(".qacontent").on("mouseover",function(){
-                        $(this).qcss({"width":"80%"});
-                        $(this).find(".qa-background-overlay").qcss({"background-color":"white"});
-                        $(".devcontent").qcss({"width":"20%"})//.find(".dev-background-overlay").qcss({"opacity":"1"});
+                        $(this).qcss({"width":"80%"}).find(".content-label.qa").qcss({"width":"80%"});
+                        $(this).find(".qa-background-overlay").qcss({"opacity":"0"});
+                        $(".devcontent, .content-label.dev").qcss({"width":"20%"})
+                        $(".content-label.dev").qcss({"font-size":"1vw","opacity":"0"})
                     }).on("mouseleave",function(){
-                        $(this).qcss({"width":"50%"});
-                        $(this).find(".qa-background-overlay").qcss({"background-color":"black"});
-                        $(".devcontent").qcss({"width":"50%"})//.find(".dev-background-overlay").qcss({"opacity":".8"});
+                        $(this).qcss({"width":"50%"}).find(".content-label.qa").qcss({"width":"50%"});
+                        $(this).find(".qa-background-overlay").qcss({"opacity":".8"});
+                        $(".devcontent, .content-label.dev").qcss({"width":"50%"})
+                        $(".content-label.dev").qcss({"font-size":"4vw","opacity":"1"})
                     });
-    
-    
                     $(".devcontent").on("mouseover",function(){
-                        $(this).qcss({"width":"80%"});
-                        $(this).find(".dev-background-overlay").qcss({"background-color":"white"});
-                        $(".qacontent").qcss({"width":"20%",})//.find(".qa-background-overlay").qcss({"opacity":"1"});
+                        $(this).qcss({"width":"80%"}).find(".content-label.dev").qcss({"width":"80%"});
+                        $(this).find(".dev-background-overlay").qcss({"opacity":"0"});
+                        $(".qacontent, .content-label.qa").qcss({"width":"20%",})
+                        $(".content-label.qa").qcss({"font-size":"1vw","opacity":"0"})
                     }).on("mouseleave",function(){
-                        $(this).qcss({"width":"50%"});
-                        $(this).find(".dev-background-overlay").qcss({"background-color":"black"});
-                        $(".qacontent").qcss({"width":"50%"})//.find(".qa-background-overlay").qcss({"opacity":".8"});
+                        $(this).qcss({"width":"50%"}).find(".content-label.dev").qcss({"width":"50%"});;
+                        $(this).find(".dev-background-overlay").qcss({"opacity":".8"});
+                        $(".qacontent, .content-label.qa").qcss({"width":"50%"})
+                        $(".content-label.qa").qcss({"font-size":"4vw","opacity":"1"})
                     });;
                 },2200)
   

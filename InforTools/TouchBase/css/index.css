@@ -143,3 +143,13 @@ body, html {
     opacity: .8;
     transition: all .5s;
 }
+.content-label{
+    position: absolute;
+    top: 35%;
+    text-align: center;
+    color: white;
+    font-family: 'Kanit';
+    font-size: 4vw;
+    width: 50%;
+    transition: all .5s;
+}
