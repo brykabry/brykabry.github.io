@@ -56,30 +56,34 @@ $(document).ready(function(){
                 $(".dev-background").delay(2150).qcss({"margin-top":"0"})
                 
                 setTimeout(function(){
-                    var widthopen = "70%";
-                    var widthclose = "30%";
-                    var widthreset = "50%"
+                    var widthopen = {"width":"70%"};
+                    var widthclose = {"width":"30%"};
+                    var widthreset =  {"width":"50%"};
+                    var opacityzero = {"opacity": "0"};
+                    var opacityone = {"opacity":".8"};
+                    var transformhide = {"transform":"scale(0.5)","opacity":"0"};
+                    var transformshow = {"transform":"scale(1)","opacity":"1"}
                     $(".qacontent").on("mouseover",function(){
-                        $(this).qcss({"width":widthopen}).find(".content-label.qa").qcss({"width":widthopen});
-                        $(this).find(".qa-background-overlay").qcss({"opacity":"0"});
-                        $(".devcontent, .content-label.dev").qcss({"width":widthclose})
-                        $(".content-label.dev").qcss({"transform":"scale(0.5)","opacity":"0"})
+                        $(this).qcss(widthopen).find(".content-label.qa").qcss(widthopen);
+                        $(this).find(".qa-background-overlay").qcss(opacityzero);
+                        $(".devcontent, .content-label.dev").qcss(widthclose)
+                        $(".content-label.dev").qcss(transformhide)
                     }).on("mouseleave",function(){
-                        $(this).qcss({"width":widthreset}).find(".content-label.qa").qcss({"width":widthreset});
-                        $(this).find(".qa-background-overlay").qcss({"opacity":".8"});
-                        $(".devcontent, .content-label.dev").qcss({"width":widthreset})
-                        $(".content-label.dev").qcss({"transform":"scale(1)","opacity":"1"})
+                        $(this).qcss(widthreset).find(".content-label.qa").qcss(widthreset);
+                        $(this).find(".qa-background-overlay").qcss(opacityone);
+                        $(".devcontent, .content-label.dev").qcss(widthreset)
+                        $(".content-label.dev").qcss(transformshow)
                     });
                     $(".devcontent").on("mouseover",function(){
-                        $(this).qcss({"width":widthopen}).find(".content-label.dev").qcss({"width":widthopen});
-                        $(this).find(".dev-background-overlay").qcss({"opacity":"0"});
-                        $(".qacontent, .content-label.qa").qcss({"width":widthclose,})
-                        $(".content-label.qa").qcss({"transform":"scale(0.5)","opacity":"0"})
+                        $(this).qcss(widthopen).find(".content-label.dev").qcss(widthopen);
+                        $(this).find(".dev-background-overlay").qcss(opacityzero);
+                        $(".qacontent, .content-label.qa").qcss(widthclose)
+                        $(".content-label.qa").qcss(transformhide)
                     }).on("mouseleave",function(){
-                        $(this).qcss({"width":widthreset}).find(".content-label.dev").qcss({"width":widthreset});;
-                        $(this).find(".dev-background-overlay").qcss({"opacity":".8"});
-                        $(".qacontent, .content-label.qa").qcss({"width":widthreset})
-                        $(".content-label.qa").qcss({"transform":"scale(1)","opacity":"1"})
+                        $(this).qcss(widthreset).find(".content-label.dev").qcss(widthreset);;
+                        $(this).find(".dev-background-overlay").qcss(opacityone);
+                        $(".qacontent, .content-label.qa").qcss(widthreset)
+                        $(".content-label.qa").qcss(transformshow)
                     });;
                 },2200)
   
