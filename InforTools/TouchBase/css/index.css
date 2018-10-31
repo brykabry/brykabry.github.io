@@ -72,6 +72,8 @@ body, html {
     opacity:0;
     border-left: 5px solid white;
     transition: all .250s;
+    width: 0;
+    background-color:white;
 }
 
 .settings-wrapper{
@@ -95,4 +97,49 @@ body, html {
     opacity: 0;
     margin-top: 10px;
     transition: all .2s;
+}
+
+.content-wrapper{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.relative-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.qacontent, .devcontent{
+    width: 50%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    transition: all .5s;
+    cursor: pointer;
+}
+.qa-background, .dev-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../src/img/qa.jpg");
+    height: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: -100%;
+    transition: all .5s;
+}
+.dev-background{
+    background-image: url("../src/img/dev.jpg");
+}
+.qa-background-overlay, .dev-background-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    opacity: .8;
+    transition: all .5s;
 }
