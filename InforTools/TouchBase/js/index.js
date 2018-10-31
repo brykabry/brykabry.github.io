@@ -52,6 +52,18 @@ $(document).ready(function(){
                 $(".title-wrapper.atstouchbase").delay(2000).qcss({"display":"none"})
                 $(".content-wrapper").delay(2000).qcss({"display":"block"})
                 
+                tb.events.showDevQAOption();
+                // setTimeout(function(){
+                //     tb.events.showMenu();
+                // },1250)
+                
+            },
+            showMenu:function(){
+                $(".hamburger").delay(200).qcss({"opacity":"1"})
+                $(".hamburger.1").delay(400).qcss({"margin-top":"0"})
+                $(".hamburger.2").delay(400).qcss({"margin-top":"20px"})
+            },
+            showDevQAOption:function(){
                 $(".qa-background").delay(2050).qcss({"margin-top":"0"})
                 $(".dev-background").delay(2150).qcss({"margin-top":"0"})
                 
@@ -86,16 +98,6 @@ $(document).ready(function(){
                         $(".content-label.qa").qcss(transformshow)
                     });;
                 },2200)
-  
-                // setTimeout(function(){
-                //     tb.events.showMenu();
-                // },1250)
-                
-            },
-            showMenu:function(){
-                $(".hamburger").delay(200).qcss({"opacity":"1"})
-                $(".hamburger.1").delay(400).qcss({"margin-top":"0"})
-                $(".hamburger.2").delay(400).qcss({"margin-top":"20px"})
             }
                 
         }
