@@ -47,9 +47,9 @@ $(document).ready(function(){
                 $(".touchbaselabel .label.touchbase .wrapper").css({"margin-left":"-375px"});
                 $(".label.blinker").delay(1000).qcss({"height":"0"});
                 $(".touchbaselabel").delay(1250).qcss({"display":"none"})
-                setTimeout(function(){
-                    tb.events.showMenu();
-                },1250)
+                // setTimeout(function(){
+                //     tb.events.showMenu();
+                // },1250)
                 
             },
             showMenu:function(){
