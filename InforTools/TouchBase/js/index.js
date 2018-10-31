@@ -56,27 +56,30 @@ $(document).ready(function(){
                 $(".dev-background").delay(2150).qcss({"margin-top":"0"})
                 
                 setTimeout(function(){
+                    var widthopen = "70%";
+                    var widthclose = "30%";
+                    var widthreset = "50%"
                     $(".qacontent").on("mouseover",function(){
-                        $(this).qcss({"width":"80%"}).find(".content-label.qa").qcss({"width":"80%"});
+                        $(this).qcss({"width":widthopen}).find(".content-label.qa").qcss({"width":widthopen});
                         $(this).find(".qa-background-overlay").qcss({"opacity":"0"});
-                        $(".devcontent, .content-label.dev").qcss({"width":"20%"})
-                        $(".content-label.dev").qcss({"font-size":"1vw","opacity":"0"})
+                        $(".devcontent, .content-label.dev").qcss({"width":widthclose})
+                        $(".content-label.dev").qcss({"transform":"scale(0.5)","opacity":"0"})
                     }).on("mouseleave",function(){
-                        $(this).qcss({"width":"50%"}).find(".content-label.qa").qcss({"width":"50%"});
+                        $(this).qcss({"width":widthreset}).find(".content-label.qa").qcss({"width":widthreset});
                         $(this).find(".qa-background-overlay").qcss({"opacity":".8"});
-                        $(".devcontent, .content-label.dev").qcss({"width":"50%"})
-                        $(".content-label.dev").qcss({"font-size":"4vw","opacity":"1"})
+                        $(".devcontent, .content-label.dev").qcss({"width":widthreset})
+                        $(".content-label.dev").qcss({"transform":"scale(1)","opacity":"1"})
                     });
                     $(".devcontent").on("mouseover",function(){
-                        $(this).qcss({"width":"80%"}).find(".content-label.dev").qcss({"width":"80%"});
+                        $(this).qcss({"width":widthopen}).find(".content-label.dev").qcss({"width":widthopen});
                         $(this).find(".dev-background-overlay").qcss({"opacity":"0"});
-                        $(".qacontent, .content-label.qa").qcss({"width":"20%",})
-                        $(".content-label.qa").qcss({"font-size":"1vw","opacity":"0"})
+                        $(".qacontent, .content-label.qa").qcss({"width":widthclose,})
+                        $(".content-label.qa").qcss({"transform":"scale(0.5)","opacity":"0"})
                     }).on("mouseleave",function(){
-                        $(this).qcss({"width":"50%"}).find(".content-label.dev").qcss({"width":"50%"});;
+                        $(this).qcss({"width":widthreset}).find(".content-label.dev").qcss({"width":widthreset});;
                         $(this).find(".dev-background-overlay").qcss({"opacity":".8"});
-                        $(".qacontent, .content-label.qa").qcss({"width":"50%"})
-                        $(".content-label.qa").qcss({"font-size":"4vw","opacity":"1"})
+                        $(".qacontent, .content-label.qa").qcss({"width":widthreset})
+                        $(".content-label.qa").qcss({"transform":"scale(1)","opacity":"1"})
                     });;
                 },2200)
   
