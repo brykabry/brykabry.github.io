@@ -61,7 +61,7 @@ $(document).ready(function(){
                 $(".qa-background").delay(2050).qcss({"margin-top":"0"})
                 $(".qa-background-overlay").delay(2050).qcss({"opacity":"0.8"})
                 $(".dev-background").delay(2150).qcss({"margin-top":"0"})
-                $(".dev-background-overlay").delay(2050).qcss({"opacity":"0.8"})
+                $(".dev-background-overlay").delay(2150).qcss({"opacity":"0.8"})
                 $(".content-label").delay(2500).qcss({"opacity":"1"})
                 
                 setTimeout(function(){
