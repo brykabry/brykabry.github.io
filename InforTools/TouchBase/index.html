@@ -16,6 +16,7 @@
         if (!firebase.apps.length) {
             firebase.initializeApp(config);
         }
+
         </script>
         <script
             src="https://code.jquery.com/jquery-3.3.1.js"
@@ -25,6 +26,16 @@
             var script = document.createElement("script");
                 script.setAttribute("src", "js/index.js?_"+Date.now());
                 document.head.appendChild(script);
+        </script>
+        <script>
+        $.fn.extend({
+            qcss: function(css) {
+            return $(this).queue(function(next) {
+                $(this).css(css);
+                next();
+            });
+            }
+        });
         </script>
         <link rel="stylesheet" href="css/index.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Kanit:800" rel="stylesheet">

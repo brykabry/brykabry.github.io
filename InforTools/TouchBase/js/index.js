@@ -1,12 +1,5 @@
 $(document).ready(function(){
-    $.fn.extend({
-        qcss: function(css) {
-           return $(this).queue(function(next) {
-              $(this).css(css);
-              next();
-           });
-        }
-     });
+
     var src = $('.bg').css('background-image');
     var url = src.match(/\((.*?)\)/)[1].replace(/('|")/g,'');
     
@@ -48,7 +41,8 @@ $(document).ready(function(){
                 // $(".label.blinker").delay(1000).qcss({"height":"0"});
                 // $(".touchbaselabel").delay(1250).qcss({"display":"none"})
                 $(".label.blinker").delay(1000).qcss({"height":"100%"})
-                .delay(400).qcss({"width":"100%"});
+                .delay(400).qcss({"width":"100%"})
+                .delay(400).qcss({"color":"black"});
                 $(".title-wrapper.atstouchbase").delay(2000).qcss({"display":"none"})
                 $(".content-wrapper").delay(2000).qcss({"display":"block"})
                 
@@ -65,39 +59,56 @@ $(document).ready(function(){
             },
             showDevQAOption:function(){
                 $(".qa-background").delay(2050).qcss({"margin-top":"0"})
+                $(".qa-background-overlay").delay(2050).qcss({"opacity":"0.8"})
                 $(".dev-background").delay(2150).qcss({"margin-top":"0"})
+                $(".dev-background-overlay").delay(2050).qcss({"opacity":"0.8"})
+                $(".content-label").delay(2500).qcss({"opacity":"1"})
                 
                 setTimeout(function(){
+                    var widthclick = {"width":"100%"}
+                    var widthnotclick = {"width":"0"}
                     var widthopen = {"width":"70%"};
                     var widthclose = {"width":"30%"};
                     var widthreset =  {"width":"50%"};
                     var opacityzero = {"opacity": "0"};
                     var opacityone = {"opacity":".8"};
                     var transformhide = {"transform":"scale(0.5)","opacity":"0"};
-                    var transformshow = {"transform":"scale(1)","opacity":"1"}
+                    var transformshow = {"transform":"scale(1)","opacity":"1"};
                     $(".qacontent").on("mouseover",function(){
                         $(this).qcss(widthopen).find(".content-label.qa").qcss(widthopen);
                         $(this).find(".qa-background-overlay").qcss(opacityzero);
-                        $(".devcontent, .content-label.dev").qcss(widthclose)
-                        $(".content-label.dev").qcss(transformhide)
+                        $(".devcontent, .content-label.dev").qcss(widthclose);
+                        $(".content-label.dev").qcss(transformhide);
                     }).on("mouseleave",function(){
                         $(this).qcss(widthreset).find(".content-label.qa").qcss(widthreset);
                         $(this).find(".qa-background-overlay").qcss(opacityone);
-                        $(".devcontent, .content-label.dev").qcss(widthreset)
-                        $(".content-label.dev").qcss(transformshow)
+                        $(".devcontent, .content-label.dev").qcss(widthreset);
+                        $(".content-label.dev").qcss(transformshow);
+                    }).on("click",function(){
+                        $(this).off()
+                        $(this).qcss(widthclick).find(".content-label.qa").qcss(widthclick);
+                        $(this).find(".qa-background-overlay").qcss(opacityzero);
+                        $(".devcontent, .content-label.dev").qcss(widthnotclick)
+                        $(".content-label.dev").qcss(transformhide)
                     });
                     $(".devcontent").on("mouseover",function(){
                         $(this).qcss(widthopen).find(".content-label.dev").qcss(widthopen);
                         $(this).find(".dev-background-overlay").qcss(opacityzero);
-                        $(".qacontent, .content-label.qa").qcss(widthclose)
-                        $(".content-label.qa").qcss(transformhide)
+                        $(".qacontent, .content-label.qa").qcss(widthclose);
+                        $(".content-label.qa").qcss(transformhide);
                     }).on("mouseleave",function(){
-                        $(this).qcss(widthreset).find(".content-label.dev").qcss(widthreset);;
+                        $(this).qcss(widthreset).find(".content-label.dev").qcss(widthreset);
                         $(this).find(".dev-background-overlay").qcss(opacityone);
-                        $(".qacontent, .content-label.qa").qcss(widthreset)
-                        $(".content-label.qa").qcss(transformshow)
-                    });;
-                },2200)
+                        $(".qacontent, .content-label.qa").qcss(widthreset);
+                        $(".content-label.qa").qcss(transformshow);
+                    }).on("click",function(){
+                        $(this).off()
+                        $(this).qcss(widthclick).find(".content-label.dev").qcss(widthclick);
+                        $(this).find(".dev-background-overlay").qcss(opacityzero);
+                        $(".qacontent, .content-label.qa").qcss(widthnotclick);
+                        $(".content-label.qa").qcss(transformhide);
+                    });
+                },2500)
             }
                 
         }
