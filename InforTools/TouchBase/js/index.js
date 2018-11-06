@@ -89,7 +89,10 @@ $(document).ready(function(){
                         $(this).qcss(widthclick).find(".content-label.qa").qcss(widthclick);
                         $(this).find(".qa-background-overlay").qcss(opacityzero);
                         $(".devcontent, .content-label.dev").qcss(widthnotclick)
-                        $(".content-label.dev").qcss(transformhide)
+                        $(".content-label.dev").qcss(transformhide);
+
+
+                        
                     });
                     $(".devcontent").on("mouseover",function(){
                         $(this).qcss(widthopen).find(".content-label.dev").qcss(widthopen);
