@@ -29,10 +29,12 @@ $(document).ready(function(){
                 .delay(timeout).qcss({"border-left":"3px solid white"})
                 var touchbase = $(".label.touchbase .wrapper");
                 touchbase.delay((timeout*7)+timeout).qcss({"margin-left":"0"})
-
-                $(".touchbaselabel .label").on("click",function(){
-                    tb.events.hideTitle();
-                })
+                setTimeout(function(){
+                    $(".touchbaselabel .label").on("click",function(){
+                        tb.events.hideTitle();
+                    })
+                },(timeout*7)+timeout)
+                
             },
             hideTitle:function(){
                 $(".touchbaselabel .label.touchbase").qcss({"margin":"0"});
