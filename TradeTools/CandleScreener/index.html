@@ -8,8 +8,16 @@
 <body>
     <script>
         $(document).ready(function(){
-            console.log("test");
-
+            var global = {
+                api = function(){
+                    return {
+                        stocklist: "https://www.pse.com.ph/stockMarket/companyInfoSecurityProfile.html?method=getListedRecords&common=yes&ajax=true&limit=9999",
+                        currentPrice: function(v){ return "https://www.pse.com.ph/stockMarket/companyInfo.html?method=fetchHeaderData&ajax=true&security="+v},
+                        previousPrice: function(v){ return "https://www.pse.com.ph/stockMarket/companyInfoHistoricalData.html?method=getRecentSecurityQuoteData&ajax=true&security="+v},
+                    }
+                }
+            }
+            console.log(global);
         })
 
     </script>
