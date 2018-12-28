@@ -17,9 +17,9 @@
         $(document).ready(function(){
             var global = {
                 api:{
-                    stocklist: "https://www.pse.com.ph/stockMarket/companyInfoSecurityProfile.html?method=getListedRecords&common=yes&ajax=true&limit=9999",
-                    currentPrice: function(v){ return "https://www.pse.com.ph/stockMarket/companyInfo.html?method=fetchHeaderData&ajax=true&security="+v},
-                    previousPrice: function(v){ return "https://www.pse.com.ph/stockMarket/companyInfoHistoricalData.html?method=getRecentSecurityQuoteData&ajax=true&security="+v},
+                    stocklist: "http://www.pse.com.ph/stockMarket/companyInfoSecurityProfile.html?method=getListedRecords&common=yes&ajax=true&limit=9999",
+                    currentPrice: function(v){ return "http://www.pse.com.ph/stockMarket/companyInfo.html?method=fetchHeaderData&ajax=true&security="+v},
+                    previousPrice: function(v){ return "http://www.pse.com.ph/stockMarket/companyInfoHistoricalData.html?method=getRecentSecurityQuoteData&ajax=true&security="+v},
                 },
                 errorFunction:function(e){
                     console.log(e)
