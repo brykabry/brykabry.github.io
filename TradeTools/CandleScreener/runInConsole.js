@@ -42,7 +42,17 @@ setTimeout(() => {
                     PO = p.sqOpen; 
                     PC = p.lastTradePrice;
                     PL = p.sqLow;
-                    if (isHaramiOrTweezerOrEngulfing(CH,CO,CC,CL,PH,PO,PC,PL)){//&&c.totalValue>=1000000&&p.totalValue>=1000000
+                    var aveVal = function(){
+                        var tVal = 0
+                        for(var i = 0, k = 19; k>=i ; i++){
+                            debugger;
+                            tVal += JSON.parse(e).records[i].totalValue
+                        }
+                        tVal = tVal/20;
+                        return tVal;
+                    }
+                    ;
+                    if (isHaramiOrTweezerOrEngulfing(CH,CO,CC,CL,PH,PO,PC,PL)&&aveVal()>=1000000){//
                         CArray.push(currentStock);
                     }
                 } catch (error) {
