@@ -45,7 +45,6 @@ setTimeout(() => {
                     var aveVal = function(){
                         var tVal = 0
                         for(var i = 0, k = 19; k>=i ; i++){
-                            debugger;
                             tVal += JSON.parse(e).records[i].totalValue
                         }
                         tVal = tVal/20;
