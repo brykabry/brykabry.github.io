@@ -15,7 +15,7 @@ setTimeout(() => {
     isHaramiOrTweezerOrEngulfing = function(CH,CO,CC,CL,PH,PO,PC,PL){
         //red or doji candle
         // current low >= previous low
-        if(PO>=PC && CL>=PL && CC >= CO){
+        if(PO>=PC && CL>=PL && CC >= CO){// && CO>PC
             return true
         }else{ return false}
 
