@@ -12,10 +12,10 @@ setTimeout(() => {
         })
         .done(success);
     }
-    isHaramiOrTweezerOrEngulfing = function(CH,CO,CC,CL,PH,PO,PC,PL){
+    isHaramiOrTweezerOrEngulfing = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
         //red or doji candle
         // current low >= previous low
-        if(PO>=PC && CL>=PL && CC >= CO){
+        if(PPO>=PPC && PL>=PPL && PC >= PO && CL >= PL && CC >= CO){
             return true
         }else{ return false}
 
@@ -42,17 +42,21 @@ setTimeout(() => {
                     PO = p.sqOpen; 
                     PC = p.lastTradePrice;
                     PL = p.sqLow;
+                    var pp =JSON.parse(e).records[2] ,PPH,PPO,PPC,PPL;
+                    PPH = pp.sqHigh;
+                    PPO = pp.sqOpen; 
+                    PPC = pp.lastTradePrice;
+                    PPL = pp.sqLow;
                     var aveVal = function(){
                         var tVal = 0
                         for(var i = 0, k = 19; k>=i ; i++){
-                            debugger;
                             tVal += JSON.parse(e).records[i].totalValue
                         }
                         tVal = tVal/20;
                         return tVal;
                     }
                     ;
-                    if (isHaramiOrTweezerOrEngulfing(CH,CO,CC,CL,PH,PO,PC,PL)&&aveVal()>=1000000){//
+                    if (isHaramiOrTweezerOrEngulfing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
                         CArray.push(currentStock);
                     }
                 } catch (error) {
