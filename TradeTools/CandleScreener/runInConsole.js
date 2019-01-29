@@ -131,6 +131,6 @@ setTimeout(() => {
     console.log(aroonBearSwingArray);
     $("body").html(`<div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
     <div class='donchianSwing'>DonchianSwing: ${donchianSwingArray.join("\n")}</div>
-    <div class='aroonSwing'>DonchianSwing: ${aroonBearSwingArray.join("\n")}</div>
+    <div class='aroonSwing'>AroonSwing: ${aroonBearSwingArray.join("\n")}</div>
     `)
 }, 1000);
