@@ -4,7 +4,8 @@ setTimeout(() => {
     stockList = JSON.parse($("body").html()).records;
     HaramiQualifiedList = [];
     currentStock = ""
-    CArray = [];
+    threeInsideUpArray = [];
+    donchianSwingArray = [];
     SAjax = function(url,success){
         $.ajax({
             url: url,
@@ -12,10 +13,18 @@ setTimeout(() => {
         })
         .done(success);
     }
-    isHaramiOrTweezerOrEngulfing = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
+    threeInsideUp = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
         //red or doji candle
         // current low >= previous low
         if(PPO>=PPC && PL>=PPL && PC >= PO && CL >= PL && CC >= CO){
+            return true
+        }else{ return false}
+
+    }
+    donchianSwing = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
+        //red or doji candle
+        // current low >= previous low
+        if(PO >= PC && CL >= PL && CC >= CO){
             return true
         }else{ return false}
 
@@ -56,8 +65,11 @@ setTimeout(() => {
                         return tVal;
                     }
                     ;
-                    if (isHaramiOrTweezerOrEngulfing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
-                        CArray.push(currentStock);
+                    if (threeInsideUp(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
+                        threeInsideUpArray.push(currentStock);
+                    }
+                    if (donchianSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
+                        donchianSwingArray.push(currentStock);
                     }
                 } catch (error) {
                     console.log(error)
@@ -65,6 +77,9 @@ setTimeout(() => {
             })
         }
     }
-    console.log(CArray);
-    $("body").html(CArray.join("\n"))
+    console.log(threeInsideUpArray);
+    console.log(donchianSwingArray);
+    $("body").html(`<div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
+    <div class='haramiOrTweezer'>DonchianSwing: ${donchianSwingArray.join("\n")}</div>
+    `)
 }, 1000);
