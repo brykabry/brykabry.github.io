@@ -13,7 +13,9 @@
             storageBucket: "infor-dashify.appspot.com",
             messagingSenderId: "769386831059"
           };
-          firebase.initializeApp(config);
+            if (!firebase.apps.length) {
+                firebase.initializeApp(config);
+            }
         </script>
         <script
             src="https://code.jquery.com/jquery-3.3.1.js"
@@ -31,9 +33,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
     </head>
 <body>
+    <div class="widget open count wrapper">
+        <div class"padwrapper">
+            <div class="title-wrapper">All Unresolved Tickets</div>
+            <div class="number-wrapper">100</div>
+        </div>    
+    </div>
     <div class="bg">
         <div class="overlay"></div>
         <div class="title-wrapper dashify"> 
     </div>
+  
 </body>
 </html>
