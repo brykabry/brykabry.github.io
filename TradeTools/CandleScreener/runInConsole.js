@@ -5,8 +5,9 @@ setTimeout(() => {
     HaramiQualifiedList = [];
     currentStock = ""
     threeInsideUpArray = [];
-    donchianSwingArray = [];
+    garbagerSwingArray = [];
     aroonBearSwingArray = [];
+    donchianMidCrossSwingArray = [];
     SAjax = function(url,success){
         $.ajax({
             url: url,
@@ -22,7 +23,7 @@ setTimeout(() => {
         }else{ return false}
 
     }
-    donchianSwing = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
+    garbagerSwing = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
         //red or doji candle
         // current low >= previous low
         if(PO >= PC && CL >= PL && CC >= CO){
@@ -31,6 +32,7 @@ setTimeout(() => {
 
     }
     aroonBearSwing = function(ze,on,tw,th,fo,fi,si,se,ei,ni,te){
+        //forming higher low
         data = [ze.sqLow,on.sqLow,tw.sqLow,th.sqLow,fo.sqLow,fi.sqLow,si.sqLow,se.sqLow,ei.sqLow,ni.sqLow,te.sqLow];
         //data = [0,1,2,3,4,5,6,7,8,9,10]
         aroonBearLowOne = data[10]
@@ -64,6 +66,24 @@ setTimeout(() => {
         }
 
 
+    }
+    donchianMidCrossSwing=function(ze,on,tw,th,fo,fi,si,se,ei,ni,te){
+        dataHigh = [ze.sqHigh,on.sqHigh,tw.sqHigh,th.sqHigh,fo.sqHigh,fi.sqHigh,si.sqHigh,se.sqHigh,ei.sqHigh,ni.sqHigh,te.sqHigh];
+        dataLow = [ze.sqLow,on.sqLow,tw.sqLow,th.sqLow,fo.sqLow,fi.sqLow,si.sqLow,se.sqLow,ei.sqLow,ni.sqLow,te.sqLow];
+        donchianHigh = dataHigh[9]
+        donchianLow = dataLow[9];
+        for(var i = 8, k = 0; i>=k;i--){
+            if(dataHigh[i]>donchianHigh){
+                donchianHigh = dataHigh[i];
+            }
+            if(donchianLow>dataLow[i]){
+                donchianLow=dataLow[i]
+            }
+        }
+        donchianMid= (donchianHigh + donchianLow)/2;
+        if(donchianMid > ze.sqOpen && ze.lastTradePrice > donchianMid){
+            return true
+        }else{return false}
     }
     for(var i = 0, k = stockList.length; k > i; i++){
         s = stockList[i];
@@ -104,8 +124,8 @@ setTimeout(() => {
                     if (threeInsideUp(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
                         threeInsideUpArray.push(currentStock);
                     }
-                    if (donchianSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
-                        donchianSwingArray.push(currentStock);
+                    if (garbagerSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
+                        garbagerSwingArray.push(currentStock);
                     }
                     if (aroonBearSwing(JSON.parse(e).records[0],
                         JSON.parse(e).records[1],
@@ -120,6 +140,19 @@ setTimeout(() => {
                         JSON.parse(e).records[10])&&aveVal()>=1000000){//
                             aroonBearSwingArray.push(currentStock);
                     }
+                    if (donchianMidCrossSwing(JSON.parse(e).records[0],
+                        JSON.parse(e).records[1],
+                        JSON.parse(e).records[2],
+                        JSON.parse(e).records[3],
+                        JSON.parse(e).records[4],
+                        JSON.parse(e).records[5],
+                        JSON.parse(e).records[6],
+                        JSON.parse(e).records[7],
+                        JSON.parse(e).records[8],
+                        JSON.parse(e).records[9],
+                        JSON.parse(e).records[10])&&aveVal()>=1000000){//
+                            donchianMidCrossSwingArray.push(currentStock);
+                    }
                 } catch (error) {
                     console.log(error)
                 }
@@ -127,10 +160,12 @@ setTimeout(() => {
         }
     }
     console.log(threeInsideUpArray);
-    console.log(donchianSwingArray);
+    console.log(garbagerSwingArray);
     console.log(aroonBearSwingArray);
+    console.log(donchianMidCrossSwingArray);
     $("body").html(`<div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
-    <div class='donchianSwing'>DonchianSwing: ${donchianSwingArray.join("\n")}</div>
+    <div class='garbagerSwing'>GarbagerSwing: ${garbagerSwingArray.join("\n")}</div>
     <div class='aroonSwing'>AroonSwing: ${aroonBearSwingArray.join("\n")}</div>
+    <div class='donchianMidCrossSwing'>DonchianMidCrossSwing: ${donchianMidCrossSwingArray.join("\n")}</div>
     `)
 }, 1000);
