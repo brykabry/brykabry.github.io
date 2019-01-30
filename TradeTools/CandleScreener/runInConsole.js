@@ -8,6 +8,7 @@ setTimeout(() => {
     garbagerSwingArray = [];
     aroonBearSwingArray = [];
     donchianMidCrossSwingArray = [];
+    // histogramStepArray=[]
     SAjax = function(url,success){
         $.ajax({
             url: url,
@@ -85,6 +86,21 @@ setTimeout(() => {
             return true
         }else{return false}
     }
+    // histogramStep=function(data){
+    //     var data12 = [];
+    //     var data26 = [];
+    //     var k12 = 2/(12+1);
+    //     var ema12 = (price * k12)+ (prevEma*(1-k12))
+    //     var k26 = 2/(26+1);
+    //     var ema26 = (price * k26)+ (prevEma*(1-k26))
+    //     for(var i = 0, k = 11; k>=i ; k--){
+    //         data12.push(data.records[k].lastTradePrice);
+    //     }
+    //     for(var i = 0, k = 25; k>=i ; k--){
+    //         data26.push(data.records[k].lastTradePrice);
+    //     }
+    //     console.log(data12);
+    // }
     for(var i = 0, k = stockList.length; k > i; i++){
         s = stockList[i];
         var stockSecurityId = s.securitySymbolId;
@@ -153,6 +169,9 @@ setTimeout(() => {
                         JSON.parse(e).records[10])&&aveVal()>=1000000){//
                             donchianMidCrossSwingArray.push(currentStock);
                     }
+                    // if (histogramStep(JSON.parse(e))&&aveVal()>=1000000){//
+                    //     histogramStepArray.push(currentStock);
+                    // }
                 } catch (error) {
                     console.log(error)
                 }
@@ -163,6 +182,7 @@ setTimeout(() => {
     console.log(garbagerSwingArray);
     console.log(aroonBearSwingArray);
     console.log(donchianMidCrossSwingArray);
+    // console.log(histogramStepArray);
     $("body").html(`<div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
     <div class='garbagerSwing'>GarbagerSwing: ${garbagerSwingArray.join("\n")}</div>
     <div class='aroonSwing'>AroonSwing: ${aroonBearSwingArray.join("\n")}</div>
