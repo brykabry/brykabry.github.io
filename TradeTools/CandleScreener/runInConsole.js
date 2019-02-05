@@ -112,7 +112,7 @@ setTimeout(() => {
             SAjax("https://www.pse.com.ph/stockMarket/companyInfoHistoricalData.html?method=getRecentSecurityQuoteData&ajax=true&security="+stockSecurityId,function(e){
                 //e.records[0]
                 try {
-                    
+                    var minVal = 5000000;
                     var c =JSON.parse(e).records[0] ,CH,CO,CC,CL;
                     CH = c.sqHigh;
                     CO = c.sqOpen; 
@@ -137,10 +137,10 @@ setTimeout(() => {
                         return tVal;
                     }
                     ;
-                    if (threeInsideUp(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
+                    if (threeInsideUp(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal){//
                         threeInsideUpArray.push(currentStock);
                     }
-                    if (garbagerSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=1000000){//
+                    if (garbagerSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal){//
                         garbagerSwingArray.push(currentStock);
                     }
                     if (aroonBearSwing(JSON.parse(e).records[0],
@@ -153,7 +153,7 @@ setTimeout(() => {
                         JSON.parse(e).records[7],
                         JSON.parse(e).records[8],
                         JSON.parse(e).records[9],
-                        JSON.parse(e).records[10])&&aveVal()>=1000000){//
+                        JSON.parse(e).records[10])&&aveVal()>=minVal){//
                             aroonBearSwingArray.push(currentStock);
                     }
                     if (donchianMidCrossSwing(JSON.parse(e).records[0],
@@ -166,7 +166,7 @@ setTimeout(() => {
                         JSON.parse(e).records[7],
                         JSON.parse(e).records[8],
                         JSON.parse(e).records[9],
-                        JSON.parse(e).records[10])&&aveVal()>=1000000){//
+                        JSON.parse(e).records[10])&&aveVal()>=minVal){//
                             donchianMidCrossSwingArray.push(currentStock);
                     }
                     // if (histogramStep(JSON.parse(e))&&aveVal()>=1000000){//
