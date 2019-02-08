@@ -6,6 +6,7 @@ setTimeout(() => {
     currentStock = ""
     threeInsideUpArray = [];
     garbagerSwingArray = [];
+    engulfingSwingArray = [];
     aroonBearSwingArray = [];
     donchianMidCrossSwingArray = [];
     // histogramStepArray=[]
@@ -27,7 +28,15 @@ setTimeout(() => {
     garbagerSwing = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
         //red or doji candle
         // current low >= previous low
-        if(PO >= PC && CL >= PL && CC >= CO){
+        if(PO >= PC && CL >= PL && CC >= CO && CO > PC){
+            return true
+        }else{ return false}
+
+    }
+    engulfingSwing = function(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL){
+        //red or doji candle
+        // current low >= previous low
+        if(PO >= PC && CC >= CO && CC > PH){
             return true
         }else{ return false}
 
@@ -143,6 +152,9 @@ setTimeout(() => {
                     if (garbagerSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal){//
                         garbagerSwingArray.push(currentStock);
                     }
+                    if (engulfingSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal){//
+                        engulfingSwingArray.push(currentStock);
+                    }
                     if (aroonBearSwing(JSON.parse(e).records[0],
                         JSON.parse(e).records[1],
                         JSON.parse(e).records[2],
@@ -180,11 +192,13 @@ setTimeout(() => {
     }
     console.log(threeInsideUpArray);
     console.log(garbagerSwingArray);
+    console.log(engulfingSwing);
     console.log(aroonBearSwingArray);
     console.log(donchianMidCrossSwingArray);
     // console.log(histogramStepArray);
     $("body").html(`<div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
     <div class='garbagerSwing'>GarbagerSwing: ${garbagerSwingArray.join("\n")}</div>
+    <div class='engulfingSwing'>EngulfingSwing: ${engulfingSwingArray.join("\n")}</div>
     <div class='aroonSwing'>AroonSwing: ${aroonBearSwingArray.join("\n")}</div>
     <div class='donchianMidCrossSwing'>DonchianMidCrossSwing: ${donchianMidCrossSwingArray.join("\n")}</div>
     `)
