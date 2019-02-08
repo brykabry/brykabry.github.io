@@ -192,7 +192,7 @@ setTimeout(() => {
     }
     console.log(threeInsideUpArray);
     console.log(garbagerSwingArray);
-    console.log(engulfingSwing);
+    console.log(engulfingSwingArray);
     console.log(aroonBearSwingArray);
     console.log(donchianMidCrossSwingArray);
     // console.log(histogramStepArray);
