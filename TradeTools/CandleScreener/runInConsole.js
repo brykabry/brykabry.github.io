@@ -2,12 +2,16 @@
 var script = document.createElement('script');script.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js";document.getElementsByTagName('head')[0].appendChild(script);
 setTimeout(() => {
     stockList = JSON.parse($("body").html()).records;
+    volumeSpikeArray=[];
+    breakoutVolumeArray=[];
+    bounceVolumeArray=[];
     HaramiQualifiedList = [];
     currentStock = ""
     threeInsideUpArray = [];
     garbagerSwingArray = [];
     aroonBearSwingArray = [];
     donchianMidCrossSwingArray = [];
+    volumeSpikeArray=[]
     // histogramStepArray=[]
     SAjax = function(url,success){
         $.ajax({
@@ -112,7 +116,7 @@ setTimeout(() => {
             SAjax("https://www.pse.com.ph/stockMarket/companyInfoHistoricalData.html?method=getRecentSecurityQuoteData&ajax=true&security="+stockSecurityId,function(e){
                 //e.records[0]
                 try {
-                    var minVal = 5000000;
+                    var minVal = 1000000;
                     var c =JSON.parse(e).records[0] ,CH,CO,CC,CL;
                     CH = c.sqHigh;
                     CO = c.sqOpen; 
@@ -137,6 +141,23 @@ setTimeout(() => {
                         return tVal;
                     }
                     ;
+                    var aveVol = function(){
+                        var tVol = 0
+                        for(var i = 0, k = 19; k>=i ; i++){
+                            tVol += JSON.parse(e).records[i].totalVolume
+                        }
+                        tVol = tVol/20;
+                        return tVol;
+                    }
+                    if (aveVol()<c.totalVolume&&aveVal()>=minVal){//
+                        volumeSpikeArray.push(currentStock);
+                    }
+                    if (aveVol()<c.totalVolume&&aveVal()>=minVal&&CC>CO){//
+                        breakoutVolumeArray.push(currentStock);
+                    }
+                    if (aveVol()<c.totalVolume&&aveVal()>=minVal&&CO>CC){//
+                        bounceVolumeArray.push(currentStock);
+                    }
                     if (threeInsideUp(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal){//
                         threeInsideUpArray.push(currentStock);
                     }
@@ -178,14 +199,21 @@ setTimeout(() => {
             })
         }
     }
+    console.log(volumeSpikeArray);
+    console.log(breakoutVolumeArray);
+    console.log(bounceVolumeArray);
     console.log(threeInsideUpArray);
     console.log(garbagerSwingArray);
     console.log(aroonBearSwingArray);
     console.log(donchianMidCrossSwingArray);
     // console.log(histogramStepArray);
-    $("body").html(`<div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
-    <div class='garbagerSwing'>GarbagerSwing: ${garbagerSwingArray.join("\n")}</div>
-    <div class='aroonSwing'>AroonSwing: ${aroonBearSwingArray.join("\n")}</div>
-    <div class='donchianMidCrossSwing'>DonchianMidCrossSwing: ${donchianMidCrossSwingArray.join("\n")}</div>
+    $("body").html(`
+    <div class='volumeSpike'>volumeSpike: ${volumeSpikeArray.join("\n")}</div>
+    <div class='breakoutVolume'>breakoutVolume: ${breakoutVolumeArray.join("\n")}</div>
+    <div class='bounceVolume'>bounceVolume: ${bounceVolumeArray.join("\n")}</div>
     `)
+    // <div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
+    // <div class='garbagerSwing'>GarbagerSwing: ${garbagerSwingArray.join("\n")}</div>
+    // <div class='aroonSwing'>AroonSwing: ${aroonBearSwingArray.join("\n")}</div>
+    // <div class='donchianMidCrossSwing'>DonchianMidCrossSwing: ${donchianMidCrossSwingArray.join("\n")}</div>
 }, 1000);
