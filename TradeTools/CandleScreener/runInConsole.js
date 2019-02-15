@@ -222,8 +222,8 @@ setTimeout(() => {
     // console.log(histogramStepArray);
     $("body").html(`
     <div class='volumeSpike'>volumeSpike: ${volumeSpikeArray.join("\n")}</div>
-    <div class='breakoutVolume'>breakoutVolume: ${breakoutVolumeArray.join("\n")}</div>
-    <div class='bounceVolume'>bounceVolume: ${bounceVolumeArray.join("\n")}</div>
+    <div class='breakoutVolume'>Breakout Play: ${breakoutVolumeArray.join("\n")}</div>
+    <div class='bounceVolume'>Bounce Play: ${bounceVolumeArray.join("\n")}</div>
     `)
     // <div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
     // <div class='garbagerSwing'>GarbagerSwing: ${garbagerSwingArray.join("\n")}</div>
