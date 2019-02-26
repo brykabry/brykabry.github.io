@@ -5,7 +5,7 @@ setTimeout(() => {
     volumeSpikeArray=[];
     breakoutVolumeArray=[];
     bounceVolumeArray=[];
-    HaramiQualifiedList = [];
+    haramiWithVolumeArray = [];
     currentStock = ""
     threeInsideUpArray = [];
     garbagerSwingArray = [];
@@ -172,6 +172,9 @@ setTimeout(() => {
                     }
                     if (garbagerSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal){//
                         garbagerSwingArray.push(currentStock);
+                    } 
+                    if (garbagerSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal&&aveVol()<c.totalVolume){//
+                        haramiWithVolumeArray.push(currentStock);
                     }
                     if (engulfingSwing(CH,CO,CC,CL,PH,PO,PC,PL,PPH,PPO,PPC,PPL)&&aveVal()>=minVal){//
                         engulfingSwingArray.push(currentStock);
@@ -216,6 +219,7 @@ setTimeout(() => {
     console.log(bounceVolumeArray);
     console.log(threeInsideUpArray);
     console.log(garbagerSwingArray);
+    console.log(haramiWithVolumeArray);
     console.log(engulfingSwingArray);
     console.log(aroonBearSwingArray);
     console.log(donchianMidCrossSwingArray);
