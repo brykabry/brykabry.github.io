@@ -7,6 +7,7 @@ setTimeout(() => {
     bounceVolumeArray=[];
     haramiWithVolumeArray = [];
     insitutionBuyingArray = [];
+    insitutionTestBuyArray = [];
     currentStock = ""
     threeInsideUpArray = [];
     garbagerSwingArray = [];
@@ -176,6 +177,9 @@ setTimeout(() => {
                     if (aveVol()>c.totalVolume&&prevAveVol()>p.totalVolume&&p.totalVolume>=c.totalVolume&&CC>PC&&aveVal()>=minVal&&CC>=CO&&PC>=PO){
                         insitutionBuyingArray.push(currentStock);
                     }
+                    if (aveVol()>c.totalVolume&&prevAveVol()>p.totalVolume&&pp.totalVolume>=p.totalVolume&&p.totalVolume>=c.totalVolume&&CC>PC&&aveVal()>=minVal&&CC>=CO&&PC>=PO&&PPO>PPC){
+                        insitutionTestBuyArray.push(currentStock);
+                    }
                     if (aveVol()<c.totalVolume&&aveVal()>=minVal&&CO>CC){//
                         bounceVolumeArray.push(currentStock);
                     }
@@ -230,6 +234,7 @@ setTimeout(() => {
     console.log("breakoutVolumeArray:"+breakoutVolumeArray);
     console.log("bounceVolumeArray:"+bounceVolumeArray);
     console.log("insitutionBuyingArray:"+insitutionBuyingArray);
+    console.log("insitutionTestBuyArray:"+insitutionTestBuyArray);
     console.log("threeInsideUpArray:"+threeInsideUpArray);
     console.log("garbagerSwingArray:"+garbagerSwingArray);
     console.log("haramiWithVolumeArray:"+haramiWithVolumeArray);
@@ -238,9 +243,10 @@ setTimeout(() => {
     console.log("aroonBearSwingArray:"+aroonBearSwingArray);
     // console.log(histogramStepArray);
     $("body").html(`
-    <div class='volumeSpike'>volumeSpike: ${volumeSpikeArray.join("\n")}</div>
     <div class='InstiBuying'>InstiBuying: ${insitutionBuyingArray.join("\n")}</div>
+    <div class='InstiTestBuyArray'>InstiTestBuying: ${insitutionTestBuyArray.join("\n")}</div>
     `)
+    // <div class='volumeSpike'>volumeSpike: ${volumeSpikeArray.join("\n")}</div>
     // <div class='breakoutVolume'>Breakout Play: ${breakoutVolumeArray.join("\n")}</div>
     // <div class='bounceVolume'>Bounce Play: ${bounceVolumeArray.join("\n")}</div>
     // <div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
