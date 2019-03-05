@@ -6,6 +6,7 @@ setTimeout(() => {
     breakoutVolumeArray=[];
     bounceVolumeArray=[];
     haramiWithVolumeArray = [];
+    insitutionBuyingArray = [];
     currentStock = ""
     threeInsideUpArray = [];
     garbagerSwingArray = [];
@@ -158,11 +159,22 @@ setTimeout(() => {
                         tVol = tVol/20;
                         return tVol;
                     }
+                    var prevAveVol = function(){
+                        var tVol = 0
+                        for(var i = 1, k = 19; k>=i ; i++){
+                            tVol += JSON.parse(e).records[i].totalVolume
+                        }
+                        tVol = tVol/20;
+                        return tVol;
+                    }
                     if (aveVol()<c.totalVolume&&aveVal()>=minVal){//
                         volumeSpikeArray.push(currentStock);
                     }
                     if (aveVol()<c.totalVolume&&aveVal()>=minVal&&CC>CO){//
                         breakoutVolumeArray.push(currentStock);
+                    }
+                    if (aveVol()>c.totalVolume&&prevAveVol()>p.totalVolume&&p.totalVolume>=c.totalVolume&&CC>PC&&aveVal()>=minVal&&CC>=CO&&PC>=PO){
+                        insitutionBuyingArray.push(currentStock);
                     }
                     if (aveVol()<c.totalVolume&&aveVal()>=minVal&&CO>CC){//
                         bounceVolumeArray.push(currentStock);
@@ -214,21 +226,23 @@ setTimeout(() => {
             })
         }
     }
-    console.log(volumeSpikeArray);
-    console.log(breakoutVolumeArray);
-    console.log(bounceVolumeArray);
-    console.log(threeInsideUpArray);
-    console.log(garbagerSwingArray);
-    console.log(haramiWithVolumeArray);
-    console.log(engulfingSwingArray);
-    console.log(aroonBearSwingArray);
-    console.log(donchianMidCrossSwingArray);
+    console.log("volumeSpikeArray:"+volumeSpikeArray);
+    console.log("breakoutVolumeArray:"+breakoutVolumeArray);
+    console.log("bounceVolumeArray:"+bounceVolumeArray);
+    console.log("insitutionBuyingArray:"+insitutionBuyingArray);
+    console.log("threeInsideUpArray:"+threeInsideUpArray);
+    console.log("garbagerSwingArray:"+garbagerSwingArray);
+    console.log("haramiWithVolumeArray:"+haramiWithVolumeArray);
+    console.log("engulfingSwingArray:"+engulfingSwingArray);
+    console.log("aroonBearSwingArray:"+aroonBearSwingArray);
+    console.log("aroonBearSwingArray:"+aroonBearSwingArray);
     // console.log(histogramStepArray);
     $("body").html(`
     <div class='volumeSpike'>volumeSpike: ${volumeSpikeArray.join("\n")}</div>
-    <div class='breakoutVolume'>Breakout Play: ${breakoutVolumeArray.join("\n")}</div>
-    <div class='bounceVolume'>Bounce Play: ${bounceVolumeArray.join("\n")}</div>
+    <div class='InstiBuying'>InstiBuying: ${insitutionBuyingArray.join("\n")}</div>
     `)
+    // <div class='breakoutVolume'>Breakout Play: ${breakoutVolumeArray.join("\n")}</div>
+    // <div class='bounceVolume'>Bounce Play: ${bounceVolumeArray.join("\n")}</div>
     // <div class='threeInsideUp'>ThreeInsideUp: ${threeInsideUpArray.join("\n")}</div>
     // <div class='garbagerSwing'>GarbagerSwing: ${garbagerSwingArray.join("\n")}</div>
     // <div class='aroonSwing'>AroonSwing: ${aroonBearSwingArray.join("\n")}</div>
