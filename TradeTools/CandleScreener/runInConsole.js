@@ -8,6 +8,7 @@ setTimeout(() => {
     haramiWithVolumeArray = [];
     insitutionBuyingArray = [];
     insitutionTestBuyArray = [];
+    bottomFishingArray = [];
     currentStock = ""
     threeInsideUpArray = [];
     garbagerSwingArray = [];
@@ -180,6 +181,9 @@ setTimeout(() => {
                     if (aveVol()>c.totalVolume&&prevAveVol()>p.totalVolume&&pp.totalVolume>=p.totalVolume&&p.totalVolume>=c.totalVolume&&CC>PC&&aveVal()>=minVal&&CC>=CO&&PC>=PO&&PPO>PPC){
                         insitutionTestBuyArray.push(currentStock);
                     }
+                    if (PO>PC&&CC>=CO&&p.totalVolume>c.totalVolume&&aveVal()>=minVal){
+                        bottomFishingArray.push(currentStock);
+                    }
                     if (aveVol()<c.totalVolume&&aveVal()>=minVal&&CO>CC){//
                         bounceVolumeArray.push(currentStock);
                     }
@@ -235,6 +239,7 @@ setTimeout(() => {
     console.log("bounceVolumeArray:"+bounceVolumeArray);
     console.log("insitutionBuyingArray:"+insitutionBuyingArray);
     console.log("insitutionTestBuyArray:"+insitutionTestBuyArray);
+    console.log("bottomFishingArray:"+bottomFishingArray);
     console.log("threeInsideUpArray:"+threeInsideUpArray);
     console.log("garbagerSwingArray:"+garbagerSwingArray);
     console.log("haramiWithVolumeArray:"+haramiWithVolumeArray);
@@ -243,7 +248,7 @@ setTimeout(() => {
     console.log("aroonBearSwingArray:"+aroonBearSwingArray);
     // console.log(histogramStepArray);
     $("body").html(`
-    <div class='InstiBuying'>InstiBuying: ${insitutionBuyingArray.join("\n")}</div>
+    <div class='bottomFishing'>bottomFishing: ${bottomFishingArray.join("\n")}</div>
     <div class='InstiTestBuyArray'>InstiTestBuying: ${insitutionTestBuyArray.join("\n")}</div>
     `)
     // <div class='volumeSpike'>volumeSpike: ${volumeSpikeArray.join("\n")}</div>
