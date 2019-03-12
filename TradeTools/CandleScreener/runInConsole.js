@@ -125,6 +125,8 @@ setTimeout(() => {
         // CArray[stockSecuritySymbol] = {}
         //get current price
         if(s.securityStatus == "O"){
+            //realtime data
+            //https://www.pse.com.ph/stockMarket/companyInfo.html?method=fetchHeaderData&ajax=true&company=29&security=146
             SAjax("https://www.pse.com.ph/stockMarket/companyInfoHistoricalData.html?method=getRecentSecurityQuoteData&ajax=true&security="+stockSecurityId,function(e){
                 //e.records[0]
                 try {
