@@ -251,7 +251,6 @@ setTimeout(() => {
     <div class='bottomFishing'>bottomFishing: ${bottomFishingArray.join("\n")}</div>
     <div class='InstiTestBuyArray'>InstiTestBuying: ${insitutionTestBuyArray.join("\n")}</div>
     `)
-    // <div class='InstiBuying'>InstiBuying: ${insitutionBuyingArray.join("\n")}</div>
     // <div class='volumeSpike'>volumeSpike: ${volumeSpikeArray.join("\n")}</div>
     // <div class='breakoutVolume'>Breakout Play: ${breakoutVolumeArray.join("\n")}</div>
     // <div class='bounceVolume'>Bounce Play: ${bounceVolumeArray.join("\n")}</div>
