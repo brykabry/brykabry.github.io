@@ -39,14 +39,9 @@ $(document).ready(function(){
                 })
             },
             download:function(version){
-                $.ajax({
-                    type: "POST",
-                    dataType: 'jsonp',
-                    url: "https://jira.lawson.com/rest/api/2/issue/HCM-63641",
-                    success: function(e){
-                        console.log(e)
-                    }
-                });
+                $.getJSON("https://jira.lawson.com/rest/api/2/issue/HCM-63641?callback=?",function(json){
+                    console.log(json);
+                  });
                 // if(version == "eleven-o-one"){
                 //     firebase.database().ref('report/110001').once('value').then(function(snapshot) {
                 //         if(snapshot.val().data==""){
