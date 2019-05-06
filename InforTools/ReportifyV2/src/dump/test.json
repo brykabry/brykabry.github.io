@@ -1,0 +1,17 @@
+{
+    "nodes":[
+    {
+      "id":"item1",
+      "host":"${host:item1}",
+      "apps":[
+         {
+            "id":"value1",
+            "template_id":"value1"
+         },
+         {
+            "id":"value2",
+            "template_id":"value2"
+         }
+      ]
+    }]
+}

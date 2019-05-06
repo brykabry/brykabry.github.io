@@ -2,6 +2,9 @@ $(document).ready(function(){
     var brykabry = {
         events:{
             init:function(){
+                firebase.database().ref('report/110001').once('value').then(function(snapshot) {
+                    $(".version").text("Last Update Time: " + snapshot.val().updatetime.split("GMT+0800 (China Standard Time)")[0])
+                });
                 brykabry.events.animateBorder(".reportify");
                 $(".title-wrapper.reportify").on("click",function(){
                     $(".title-wrapper.reportify").css({"transform":"scale(1.5)"}).on("mouseleave",function(){$(".borderbottom, .bordertop").css({"margin-left":"0"});$(".borderright, .borderleft").css({"margin-top":"0"});});

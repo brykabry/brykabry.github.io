@@ -1,0 +1,1733 @@
+{
+	"dataViewSet": {
+		"rangeViewKey": "Build(HCM,34,_niu_)",
+		"data": [{
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1560)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1560)"
+			},
+			"id": 1,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019032803294926"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1560"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Built"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1560
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019032803294926"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Built",
+						"value": "100"
+					}],
+					"value": 100
+				}
+			},
+			"representativeText": "1560"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1559)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1559)"
+			},
+			"id": 2,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019032722150508"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1559"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Built"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1559
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019032722150508"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Built",
+						"value": "100"
+					}],
+					"value": 100
+				}
+			},
+			"representativeText": "1559"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1558)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1558)"
+			},
+			"id": 3,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019032716524217"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1558"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "SmokeTested"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1558
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019032716524217"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "SmokeTested",
+						"value": "170"
+					}],
+					"value": 170
+				}
+			},
+			"representativeText": "1558"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1550)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1550)"
+			},
+			"id": 4,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019032519525997"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1550"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "SmokeTested"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1550
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019032519525997"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "SmokeTested",
+						"value": "170"
+					}],
+					"value": 170
+				}
+			},
+			"representativeText": "1550"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1546)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1546)"
+			},
+			"id": 5,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019032321560253"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1546"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "SmokeTested"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1546
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019032321560253"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "SmokeTested",
+						"value": "170"
+					}],
+					"value": 170
+				}
+			},
+			"representativeText": "1546"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1531)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1531)"
+			},
+			"id": 6,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019032122010770"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1531"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "TechQualified"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1531
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019032122010770"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "TechQualified",
+						"value": "200"
+					}],
+					"value": 200
+				}
+			},
+			"representativeText": "1531"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1525)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1525)"
+			},
+			"id": 7,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019032020044818"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1525"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "TechQualified"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1525
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019032020044818"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "TechQualified",
+						"value": "200"
+					}],
+					"value": 200
+				}
+			},
+			"representativeText": "1525"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1508)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1508)"
+			},
+			"id": 8,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019031711473722"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1508"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "TechQualified"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1508
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019031711473722"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "TechQualified",
+						"value": "200"
+					}],
+					"value": 200
+				}
+			},
+			"representativeText": "1508"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1505)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1505)"
+			},
+			"id": 9,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019031415433957"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1505"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1505
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019031415433957"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "1505"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1433)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1433)"
+			},
+			"id": 10,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019021217322083"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1433"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1433
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019021217322083"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "1433"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1356)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1356)"
+			},
+			"id": 11,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2019011519094731"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1356"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1356
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2019011519094731"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "1356"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1273)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1273)"
+			},
+			"id": 12,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2018121101291254"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1273"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1273
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2018121101291254"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "1273"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1216)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1216)"
+			},
+			"id": 13,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2018111221564605"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1216"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1216
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2018111221564605"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "1216"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1135)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1135)"
+			},
+			"id": 14,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2018101519594536"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1135"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1135
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2018101519594536"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "1135"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,1055)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,1055)"
+			},
+			"id": 15,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2018091719081055"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.1055"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 1055
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2018091719081055"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "1055"
+		}, {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,998)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"posToViewKey": {
+				"pk": "Build(HCM,34,998)"
+			},
+			"id": 16,
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": "2018081413220382"
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": "11.0.1.99.998"
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": "Milestone"
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 998
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"value": 1
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": "2018081413220382"
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Milestone",
+						"value": "550"
+					}],
+					"value": 550
+				}
+			},
+			"representativeText": "998"
+		}],
+		"pagingOptions": {
+			"nextDisabled": true,
+			"sortOrderName": "Build.SymbolicKey",
+			"previousDisabled": true,
+			"fk": "Build(HCM,34,1560)",
+			"firstDisabled": true,
+			"lastDisabled": true,
+			"hasPrevious": false,
+			"pageSize": 20,
+			"hasNext": false,
+			"isAscending": false,
+			"lk": "Build(HCM,34,998)"
+		},
+		"header": {
+			"viewAuditSecured": true,
+			"resourceId": "Build(HCM,34,_niu_)",
+			"viewFullAuditSecured": true,
+			"busClassName": "Build",
+			"navigations": ["ViewIssuesSinceRelease", "ViewProductsUsed", "ViewTestResults", "ViewBuildsUsing"],
+			"actionMeta": {},
+			"name": "Build",
+			"actionIndexes": [],
+			"fields": {
+				"Build_CreateStamp": {
+					"disableFieldHistory": true,
+					"size": 0,
+					"members": ["Build_CreateStamp_prd_TimeStamp"],
+					"mutable": false,
+					"type": "group",
+					"value": ""
+				},
+				"Product": {
+					"size": 50,
+					"mutable": false,
+					"value": "HCM",
+					"required": true
+				},
+				"ReleaseID": {
+					"size": 32,
+					"mutable": true,
+					"value": ""
+				},
+				"BuildStream": {
+					"size": 8,
+					"mutable": false,
+					"value": 34,
+					"required": true
+				},
+				"TestingResultsCount": {
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"Product_col_IsDevProduct": {
+					"size": -1,
+					"mutable": false,
+					"value": true
+				},
+				"Maturity_col_Name": {
+					"size": 15,
+					"mutable": false,
+					"value": ""
+				},
+				"_op_BuildStream_prd_Path_spc_translation_cp_": {
+					"size": 0,
+					"mutable": false,
+					"value": "HCM/LTM11.0.1DEV"
+				},
+				"Build": {
+					"symbolicKey": true,
+					"size": 6,
+					"mutable": false,
+					"value": 0
+				},
+				"WorkStatus": {
+					"size": 1,
+					"mutable": false,
+					"stateValues": [{
+						"label": "Idle",
+						"value": "1",
+						"selected": false
+					}, {
+						"label": "Requested",
+						"value": "2",
+						"selected": false
+					}, {
+						"label": "Active",
+						"value": "3",
+						"selected": false
+					}, {
+						"label": "Failed",
+						"value": "5",
+						"selected": false
+					}],
+					"value": 0
+				},
+				"BuildsUsing": {
+					"size": 4,
+					"mutable": false,
+					"value": 0
+				},
+				"Build_CreateStamp_prd_TimeStamp": {
+					"size": 16,
+					"mutable": false,
+					"value": ""
+				},
+				"IsFailed": {
+					"size": -1,
+					"mutable": false,
+					"value": false
+				},
+				"Maturity": {
+					"size": 4,
+					"mutable": true,
+					"stateValues": [{
+						"label": "Configured",
+						"value": "10",
+						"selected": false
+					}, {
+						"label": "Feedback",
+						"value": "50",
+						"selected": false
+					}, {
+						"label": "Built",
+						"value": "100",
+						"selected": false
+					}, {
+						"label": "SmokeTested",
+						"value": "170",
+						"selected": false
+					}, {
+						"label": "TechQualified",
+						"value": "200",
+						"selected": false
+					}, {
+						"label": "AppQualified",
+						"value": "300",
+						"selected": false
+					}, {
+						"label": "CloudQualified",
+						"value": "310",
+						"selected": false
+					}, {
+						"label": "QAReady",
+						"value": "320",
+						"selected": false
+					}, {
+						"label": "QAComplete",
+						"value": "360",
+						"selected": false
+					}, {
+						"label": "ProductionReady",
+						"value": "390",
+						"selected": false
+					}, {
+						"label": "ReleaseCand",
+						"value": "490",
+						"selected": false
+					}, {
+						"label": "Milestone",
+						"value": "550",
+						"selected": false
+					}, {
+						"label": "TurnedOver",
+						"value": "595",
+						"selected": false
+					}, {
+						"label": "InProduction",
+						"value": "600",
+						"selected": false
+					}, {
+						"label": "CloudRelease",
+						"value": "620",
+						"selected": false
+					}, {
+						"label": "Patch",
+						"value": "690",
+						"selected": false
+					}, {
+						"label": "Released",
+						"value": "700",
+						"selected": false
+					}],
+					"value": 0
+				}
+			},
+			"representativeText": "0"
+		},
+		"actionIndexes": [],
+		"listUrl": "http://usspw565.lawson.com/lars/BuildRepositoryForWeb/list/Build(HCM,34,_niu_).ActiveListForPanel?pagesize=20&csk.3x=true&relation=BuildStream(HCM,34).Build_ByBuildStream_UsingSymbolicKey_SetRel"
+	},
+	"status": "COMPLETED"
+}
