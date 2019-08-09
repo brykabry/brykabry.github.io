@@ -85,7 +85,7 @@ $(document).ready(function(){
                     return;
                 }   
                 var datenow = new Date()
-                var fileName = "GHR/TM " + ReportTitle.replace(/ /g,"_") + "CU Report as of " + datenow.toLocaleDateString();
+                var fileName = "GHR/TM " + ReportTitle.replace(/ /g,"_") + " CU Report as of " + datenow.toLocaleDateString();
                 //fileName += ReportTitle.replace(/ /g,"_");   
                 var uri = 'data:text/csv;charset=utf-8,' + CSV;
                 var link = document.createElement("a");    
