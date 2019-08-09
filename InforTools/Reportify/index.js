@@ -47,7 +47,7 @@ $(document).ready(function(){
                         if(snapshot.val().data==""){
                             alert("NO DATA AVAILABLE!");
                         }else{
-                            brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
+                            brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"11_0_1", true)
                         }
                     });
                 }else if(version == "eleven-o-o"){
@@ -55,7 +55,7 @@ $(document).ready(function(){
                         if(snapshot.val().data==""){
                             alert("NO DATA AVAILABLE!");
                         }else{
-                            brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"", true)
+                            brykabry.events.JSONToCSVConvertor(JSON.parse(snapshot.val().data),"11_0_0", true)
                         }
                     });
                 }
