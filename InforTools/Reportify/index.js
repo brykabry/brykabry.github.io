@@ -2,7 +2,7 @@ $(document).ready(function(){
     var brykabry = {
         events:{
             init:function(){
-                firebase.database().ref('report/110001').once('value').then(function(snapshot) {
+                firebase.database().ref('report/110001').on('value', function(snapshot) {
                     $(".version").text("Last Update Time: " + snapshot.val().updatetime.split("GMT+0800 (China Standard Time)")[0])
                 });
                 brykabry.events.animateBorder(".reportify");
