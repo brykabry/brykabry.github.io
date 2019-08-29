@@ -5,7 +5,7 @@ body, html {
     overflow: hidden;
 }
 .bg {
-    background-image: url("src/img/chimmy.gif");
+    background-image: url("src/img/troll.png");
     height: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +14,8 @@ body, html {
 .overlay{
     background-color: black;
     height: 100%;
-    opacity: .7;
+    /* opacity: .7; */
+    opacity: 0.4;
 }
 .title-wrapper {
     text-align: center;
