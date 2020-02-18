@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <title>Burnify</title>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/5.5.4/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAAIjb-s0Xyd_NmCGOO4RQInTJHPQjgLgw",
+            authDomain: "burnify-infortools.firebaseapp.com",
+            databaseURL: "https://burnify-infortools.firebaseio.com/",
+            projectId: "burnify-infortools",
+            storageBucket: "burnify-infortools.appspot.com",
+            // messagingSenderId: "347603763664"
+        };
+        if (!firebase.apps.length) {
+            firebase.initializeApp(config);
+        }
+
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            var script = document.createElement("script");
+                script.setAttribute("src", "js/index.js?_"+Date.now());
+                document.head.appendChild(script);
+        </script>
+        <script>
+        $.fn.extend({
+            qcss: function(css) {
+            return $(this).queue(function(next) {
+                $(this).css(css);
+                next();
+            });
+            }
+        });
+        </script>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Kanit:800" rel="stylesheet">
+
+    </head>
+<body>
+    
+</body>
+</html>
