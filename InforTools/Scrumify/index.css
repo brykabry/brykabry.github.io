@@ -4,9 +4,11 @@
 }
 
 .droppable {
-    background-color: var(--success);
+    background-color: lightskyblue;
     min-height: 120px;
     margin-bottom: 1rem;
+    opacity: 0.1;
+    outline-style: dotted;
 }
 .lightBlue{
     color: cornflowerblue
