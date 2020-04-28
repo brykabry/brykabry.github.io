@@ -217,7 +217,7 @@ function markUp(id,desc) {
             ${desc}
         </div>
         <hr>
-        <button class="btn btn-danger btn-sm deletebtn" onclick="deleteItem('${id}')">Delete</button>
+        <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
     </div>
 </div>
 <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>`
