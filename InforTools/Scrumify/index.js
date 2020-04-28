@@ -36,9 +36,9 @@ const deleteItem = (id) => {
 }
 const addItem = (id) => {
     refreshData("add",[$("#id-name").val(),$("#desc-text").val()]);
-    $("#id-name").val("");
-    $("#desc-text").val("");
-    $("#closebtn").click()
+    $("#addModal #id-name").val("");
+    $("#addModal #desc-text").val("");
+    $("#addModal #closebtn").click()
 
 }
 
@@ -88,6 +88,7 @@ let scrum = urlParams.get('scrum') ? urlParams.get('scrum') : "test"
 let idArray = [] 
 firebase.database().ref(scrum).on('value', function(snapshot) {
     let data = snapshot.val();
+    $(".headertitle").html("Scrumify-"+scrum);
     if (typeof data != "undefined" && data != null){
         idArray = data.idcollection;
         $(".items").html(`<div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>`)
@@ -133,6 +134,8 @@ function refreshData(action,id){
             todo.push(ret)
             idcollection.push(id[0])
 
+        }else{
+            alert("Cannot have duplicate titles.");
         }
     }
     $(".todo .items .card").each(function(e,k){
@@ -193,6 +196,17 @@ function refreshData(action,id){
         done: done,
     });
 }
+$('#editModal').on('show.bs.modal', function (event) {
+    debugger;
+    var button = $(event.relatedTarget) // Button that triggered the modal
+    var recipient = button.data('id') // Extract info from data-* attributes
+    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+    var modal = $(this)
+    modal.find('.modal-title').text('New message to ' + recipient)
+    modal.find('.modal-body input').val(recipient)
+  })
+
 function markUp(id,desc) {
     return `<div class="card draggable shadow-sm" id="${id}" draggable="true" ondragstart="drag(event)">
     <div class="card-body p-2">
@@ -202,10 +216,10 @@ function markUp(id,desc) {
         <div class="description">
             ${desc}
         </div>
-
-        <button class="btn btn-primary btn-sm deletebtn" onclick="deleteItem('${id}')">Delete</button>
+        <hr>
+        <button class="btn btn-danger btn-sm deletebtn" onclick="deleteItem('${id}')">Delete</button>
     </div>
 </div>
 <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>`
 }
-        // <button class="btn btn-primary btn-sm editbtn">Edit</button>
+{/* <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal" data-id="${id}" data-desc="${desc}" data-action="edit">Edit</button> */}
