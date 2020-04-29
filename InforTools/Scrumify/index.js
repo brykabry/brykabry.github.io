@@ -129,6 +129,7 @@ function refreshData(action,id){
     let done = [];
     let idcollection = [];
     if (action == "add"){
+        id[0] = id[0].replace(/ /g,"bry")
         if(!idArray.includes(id[0])){
             let ret = {"id":id[0],"description":$.trim(id[1])}
             todo.push(ret)
@@ -139,53 +140,57 @@ function refreshData(action,id){
         }
     }
     $(".todo .items .card").each(function(e,k){
-        let ret = {"id":$(k).find(".id").text(),"description":$.trim($(k).find(".description").text())}
+        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
-            if($(k).find(".id").text()!=id){
+            if(tempID!=id){
                 todo.push(ret)
-                idcollection.push($(k).find(".id").text())
+                idcollection.push(tempID)
             }
         }else{
             todo.push(ret)
-            idcollection.push($(k).find(".id").text())
+            idcollection.push(tempID)
         }
         
     });
    
     $(".inprogress .items .card").each(function(e,k){
-        let ret = {"id":$(k).find(".id").text(),"description":$.trim($(k).find(".description").text())}
+        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
-            if($(k).find(".id").text()!=id){
+            if(tempID!=id){
                 inprogress.push(ret)
-                idcollection.push($(k).find(".id").text())
+                idcollection.push(tempID)
             }
         }else{
             inprogress.push(ret)
-            idcollection.push($(k).find(".id").text())
+            idcollection.push(tempID)
         }
     })
     $(".testing .items .card").each(function(e,k){
-        let ret = {"id":$(k).find(".id").text(),"description":$.trim($(k).find(".description").text())}
+        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
-            if($(k).find(".id").text()!=id){
+            if(tempID!=id){
                 testing.push(ret)
-                idcollection.push($(k).find(".id").text())
+                idcollection.push(tempID)
             }
         }else{
             testing.push(ret)
-            idcollection.push($(k).find(".id").text())
+            idcollection.push(tempID)
         }
     })
     $(".done .items .card").each(function(e,k){
-        let ret = {"id":$(k).find(".id").text(),"description":$.trim($(k).find(".description").text())}
+        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
-            if($(k).find(".id").text()!=id){
+            if(tempID!=id){
                 done.push(ret)
-                idcollection.push($(k).find(".id").text())
+                idcollection.push(tempID)
             }
         }else{
             done.push(ret)
-            idcollection.push($(k).find(".id").text())
+            idcollection.push(tempID)
         }
     })
     firebase.database().ref(scrum).set({
@@ -208,10 +213,12 @@ $('#editModal').on('show.bs.modal', function (event) {
   })
 
 function markUp(id,desc) {
+    debugger;
+    id.replace(/bry/g," ")
     return `<div class="card draggable shadow-sm" id="${id}" draggable="true" ondragstart="drag(event)">
     <div class="card-body p-2">
         <div class="card-title">
-            <div class="lead font-weight-light lightBlue id">${id}</div>
+            <div class="lead font-weight-light lightBlue id">${id.replace(/bry/g," ")}</div>
         </div>
         <div class="description">
             ${desc}
