@@ -78,7 +78,7 @@ $(document).ready(function(){
                         if(arrData[i][index].indexOf("HYPERLINK") > "-1"){
                             row += '"' + arrData[i][index] + '",';//.replace(/"/g,"'")
                         }else{
-                            row += '"' + arrData[i][index].replace(/"/g,"'") + '",';
+                            row += '"' + arrData[i][index].replace(/"/g,"'").replace(/#/g," ") + '",';
                         }
                     }
                     row.slice(0, row.length - 1);
