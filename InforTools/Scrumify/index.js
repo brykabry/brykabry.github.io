@@ -213,6 +213,7 @@ $('#editModal').on('show.bs.modal', function (event) {
   })
 
 function markUp(id,desc) {
+    
     return `<div class="card draggable shadow-sm" id="${id}" draggable="true" ondragstart="drag(event)">
     <div class="card-body p-2">
         <div class="card-title">
