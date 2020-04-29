@@ -129,7 +129,7 @@ function refreshData(action,id){
     let done = [];
     let idcollection = [];
     if (action == "add"){
-        id[0] = id[0].replace(/ /g,"bry")
+        id[0] = id[0].replace(/ /g,"BBB")
         if(!idArray.includes(id[0])){
             let ret = {"id":id[0],"description":$.trim(id[1])}
             todo.push(ret)
@@ -140,7 +140,7 @@ function refreshData(action,id){
         }
     }
     $(".todo .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
@@ -155,7 +155,7 @@ function refreshData(action,id){
     });
    
     $(".inprogress .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
@@ -168,7 +168,7 @@ function refreshData(action,id){
         }
     })
     $(".testing .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
@@ -181,7 +181,7 @@ function refreshData(action,id){
         }
     })
     $(".done .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"bry")
+        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
@@ -217,7 +217,7 @@ function markUp(id,desc) {
     return `<div class="card draggable shadow-sm" id="${id}" draggable="true" ondragstart="drag(event)">
     <div class="card-body p-2">
         <div class="card-title">
-            <div class="lead font-weight-light lightBlue id">${id.replace(/bry/g," ")}</div>
+            <div class="lead font-weight-light lightBlue id">${id.replace(/BBB/g," ")}</div>
         </div>
         <div class="description">
             ${desc}
