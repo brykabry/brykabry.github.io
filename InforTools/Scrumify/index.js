@@ -130,14 +130,13 @@ function refreshData(action,id){
     let idcollection = [];
     if (action == "add"){
         id[0] = id[0].replace(/ /g,"BBB")
-        if(!idArray.includes(id[0])){
-            let ret = {"id":id[0],"description":$.trim(id[1])}
-            todo.push(ret)
-            idcollection.push(id[0])
-
-        }else{
-            alert("Cannot have duplicate titles.");
+        while(idArray.includes(id[0])){
+            id[0] = id[0] + "BBB"
         }
+        let ret = {"id":id[0],"description":$.trim(id[1])}
+        todo.push(ret)
+        idcollection.push(id[0])
+
     }
     $(".todo .items .card").each(function(e,k){
         let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
