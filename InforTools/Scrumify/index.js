@@ -35,7 +35,7 @@ const deleteItem = (id) => {
     refreshData("delete",id);
 }
 const addItem = (id) => {
-    refreshData("add",[$("#id-name").val(),$("#desc-text").val()]);
+    refreshData("add",[$("#id-name").val(),latestIndex]);
     $("#addModal #id-name").val("");
     $("#addModal #desc-text").val("");
     $("#addModal #closebtn").click()
@@ -131,15 +131,11 @@ function refreshData(action,id){
     let done = [];
     let idcollection = [];
     if (action == "add"){
-        id[0] = id[0].replace(/ /g,"BBB")
-        while(idArray.includes(id[0])){
-            id[0] = id[0] + "BBB"
-        }
-        let ret = {"id":id[0],"description":$.trim(id[1])}
+        latestIndex++
+        id++
+        let ret = {"id":id,"title":$.trim($("#id-name").val()),"description":$.trim($("#desc-text").val())}
         todo.push(ret)
         idcollection.push(id[0])
-        latestIndex++
-
     }
     $(".todo .items .card").each(function(e,k){
         let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
