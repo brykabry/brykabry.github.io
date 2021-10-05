@@ -43,9 +43,15 @@ const addItem = (id) => {
 }
 const updateItem = (id) => {
     refreshData("update",latestIndex);
-    $("#editModal #id-name").val("");
-    $("#editModal #desc-text").val("");
-    $("#editModal #closebtn").click()
+    $("#updateModal #id-name").val("");
+    $("#updateModal #desc-text").val("");
+    $("#updateModal #closebtn").click()
+
+}
+
+const popData = (event) => {
+    $("#updateModal #id-name").val("");
+    $("#updateModal #desc-text").val("");
 
 }
 
