@@ -89,7 +89,7 @@ let latestIndex = ''
 let idArray = [] 
 firebase.database().ref(scrum).on('value', function(snapshot) {
     let data = snapshot.val();
-    latestIndex = data.latestIndex;
+    latestIndex = data.latestIndex ? data.latestIndex : 0;
     $(".headertitle").html("Scrumify-"+scrum);
     if (typeof data != "undefined" && data != null){
         idArray = data.idcollection;
