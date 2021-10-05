@@ -50,8 +50,8 @@ const updateItem = (id) => {
 }
 
 const popData = (event) => {
-    $("#updateModal #id-name").val("");
-    $("#updateModal #desc-text").val("");
+    $("#updateModal #id-name").val($("#"+event).find(".card-title div").text());
+    $("#updateModal #desc-text").val($.trim($("#"+event).find(".description").text()));
 
 }
 
