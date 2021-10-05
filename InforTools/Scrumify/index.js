@@ -205,9 +205,9 @@ function markUp(id,title,desc) {
         <div class="card-title">
             <div class="lead font-weight-light lightBlue id">${title}</div>
         </div>
-        <p class="description">
+        <pre class="description">
             ${desc}
-        </p>
+        </pre>
         <hr>
         <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
     </div>
