@@ -206,7 +206,7 @@ function markUp(id,title,desc) {
             <div class="lead font-weight-light lightBlue id">${title}</div>
         </div>
         <pre class="description">
-            ${desc}
+            ${$.trim(desc)}
         </pre>
         <hr>
         <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
