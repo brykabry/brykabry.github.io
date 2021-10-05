@@ -42,6 +42,9 @@ const addItem = (id) => {
 
 }
 const updateItem = (id) => {
+    let currentID = $("#updateModal").data("id")
+    $("#"+currentID).find(".card-title div").text($("#updateModal #id-name").val())
+    $.trim($("#"+currentID).find(".description").text($("#updateModal #desc-text").val()))
     refreshData("update",latestIndex);
     $("#updateModal #id-name").val("");
     $("#updateModal #desc-text").val("");
@@ -50,6 +53,7 @@ const updateItem = (id) => {
 }
 
 const popData = (event) => {
+    $("#updateModal").data("id",event)
     $("#updateModal #id-name").val($("#"+event).find(".card-title div").text());
     $("#updateModal #desc-text").val($.trim($("#"+event).find(".description").text()));
 
