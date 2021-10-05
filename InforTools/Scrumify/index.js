@@ -134,7 +134,7 @@ function refreshData(action,id){
         todo.push(ret)
     }
     $(".todo .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
+        let tempID = $(k).attr("id")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
@@ -147,7 +147,7 @@ function refreshData(action,id){
     });
    
     $(".inprogress .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
+        let tempID = $(k).attr("id")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
@@ -158,7 +158,7 @@ function refreshData(action,id){
         }
     })
     $(".testing .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
+        let tempID = $(k).attr("id")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
@@ -169,7 +169,7 @@ function refreshData(action,id){
         }
     })
     $(".done .items .card").each(function(e,k){
-        let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
+        let tempID = $(k).attr("id")
         let ret = {"id":tempID,"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
