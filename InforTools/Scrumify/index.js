@@ -213,7 +213,7 @@ function markUp(id,title,desc) {
             ${desc}
         </div>
         <hr>
-        <button type="button" class="btn btn-success btn-sm btn-block updatebtn" data-toggle="modal" data-target="#updateModal" data-action="update" onclick="popData('${this}')">Update</button>
+        <button type="button" class="btn btn-success btn-sm btn-block updatebtn" data-toggle="modal" data-target="#updateModal" data-action="update" onclick="popData('${id}')">Update</button>
         <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
         
     </div>
