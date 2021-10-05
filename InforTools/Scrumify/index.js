@@ -17,7 +17,7 @@ const drop = (event) => {
     event.preventDefault();
     //SaveHERE
     const data = event.dataTransfer.getData("text/plain");
-    const element = $(document).find("#"+data)//document.querySelector(`#${data}`);
+    const element = document.querySelector(`#${data}`);
     try {
         // remove the spacer content from dropzone
         event.target.removeChild(event.target.firstChild);
@@ -129,7 +129,7 @@ function refreshData(action,id){
     let done = [];
     if (action == "add"){
         latestIndex++
-        id++
+        let tempID = "data-"+latestIndex
         let ret = {"id":id,"title":$.trim($("#id-name").val()),"description":$.trim($("#desc-text").val())}
         todo.push(ret)
     }
