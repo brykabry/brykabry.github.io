@@ -41,6 +41,11 @@ const addItem = (id) => {
     $("#addModal #closebtn").click()
 
 }
+const updateItem = (id) => {
+    refreshData("update",latestIndex);
+    $("#editModal #closebtn").click()
+
+}
 
 const updateDropzones = () => {
     /* after dropping, refresh the drop target areas
@@ -210,6 +215,7 @@ function markUp(id,title,desc) {
         </div>
         <hr>
         <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
+        <button class="btn btn-success btn-sm btn-block updatebtn" onclick="updateItem('${id}')">Update</button>
     </div>
 </div>
 <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>`
