@@ -32,6 +32,7 @@ updateDropzones();
 refreshData();
 }
 const deleteItem = (id) => {
+    let currentID = $("#deleteModal").data("id")
     refreshData("delete",id);
 }
 const addItem = (id) => {
@@ -59,6 +60,9 @@ const popData = (event) => {
 
 }
 
+const delData = (event) => {
+    $("#deleteModal").data("id",event)
+}
 const updateDropzones = () => {
     /* after dropping, refresh the drop target areas
     so there is a dropzone after each item
@@ -218,7 +222,7 @@ function markUp(id,title,desc) {
         </div>
         <hr>
         <button type="button" class="btn btn-success btn-sm btn-block updatebtn" data-toggle="modal" data-target="#updateModal" data-action="update" onclick="popData('${id}')">Update</button>
-        <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
+        <button type="button" class="btn btn-danger btn-sm btn-block deletebtn" data-toggle="modal" data-target="#deleteModal" data-action="delete" onclick="delData('${id}')">Delete</button>
         
     </div>
 </div>
