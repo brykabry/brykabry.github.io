@@ -130,7 +130,7 @@ function refreshData(action,id){
     if (action == "add"){
         latestIndex++
         let tempID = "data-"+latestIndex
-        let ret = {"id":id,"title":$.trim($("#id-name").val()),"description":$.trim($("#desc-text").val())}
+        let ret = {"id":tempID,"title":$.trim($("#id-name").val()),"description":$.trim($("#desc-text").val())}
         todo.push(ret)
     }
     $(".todo .items .card").each(function(e,k){
