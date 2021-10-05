@@ -34,6 +34,7 @@ refreshData();
 const deleteItem = (id) => {
     let currentID = $("#deleteModal").data("id")
     refreshData("delete",currentID);
+    $("#deleteModal #closebtn").click()
 }
 const addItem = (id) => {
     refreshData("add",latestIndex);
