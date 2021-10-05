@@ -17,7 +17,7 @@ const drop = (event) => {
     event.preventDefault();
     //SaveHERE
     const data = event.dataTransfer.getData("text/plain");
-    const element = document.querySelector(`#${data}`);
+    const element = $(document).find("#"+data)//document.querySelector(`#${data}`);
     try {
         // remove the spacer content from dropzone
         event.target.removeChild(event.target.firstChild);
