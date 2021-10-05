@@ -86,13 +86,11 @@ function unwrap(node) {
 let urlParams = new URLSearchParams(window.location.search);
 let scrum = urlParams.get('scrum') ? urlParams.get('scrum') : "test"
 let latestIndex = ''
-let idArray = [] 
 firebase.database().ref(scrum).on('value', function(snapshot) {
     let data = snapshot.val();
     latestIndex = data.latestIndex ? data.latestIndex : 0;
     $(".headertitle").html("Scrumify-"+scrum);
     if (typeof data != "undefined" && data != null){
-        idArray = data.idcollection;
         $(".items").html(`<div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>`)
         if(typeof data.todo != "undefined" ){
             // $(".todo .items .card").remove()
@@ -129,13 +127,11 @@ function refreshData(action,id){
     let inprogress = [];
     let testing = [];
     let done = [];
-    let idcollection = [];
     if (action == "add"){
         latestIndex++
         id++
         let ret = {"id":id,"title":$.trim($("#id-name").val()),"description":$.trim($("#desc-text").val())}
         todo.push(ret)
-        idcollection.push(id[0])
     }
     $(".todo .items .card").each(function(e,k){
         let tempID = $(k).find(".id").text().replace(/ /g,"BBB")
@@ -143,11 +139,9 @@ function refreshData(action,id){
         if (action == "delete"){
             if(tempID!=id){
                 todo.push(ret)
-                idcollection.push(tempID)
             }
         }else{
             todo.push(ret)
-            idcollection.push(tempID)
         }
         
     });
@@ -158,11 +152,9 @@ function refreshData(action,id){
         if (action == "delete"){
             if(tempID!=id){
                 inprogress.push(ret)
-                idcollection.push(tempID)
             }
         }else{
             inprogress.push(ret)
-            idcollection.push(tempID)
         }
     })
     $(".testing .items .card").each(function(e,k){
@@ -171,11 +163,9 @@ function refreshData(action,id){
         if (action == "delete"){
             if(tempID!=id){
                 testing.push(ret)
-                idcollection.push(tempID)
             }
         }else{
             testing.push(ret)
-            idcollection.push(tempID)
         }
     })
     $(".done .items .card").each(function(e,k){
@@ -184,16 +174,13 @@ function refreshData(action,id){
         if (action == "delete"){
             if(tempID!=id){
                 done.push(ret)
-                idcollection.push(tempID)
             }
         }else{
             done.push(ret)
-            idcollection.push(tempID)
         }
     })
     firebase.database().ref(scrum).set({
         latestIndex : latestIndex,
-        idcollection: idcollection,
         todo: todo,
         inprogress: inprogress,
         testing: testing,
