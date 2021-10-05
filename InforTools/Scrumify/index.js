@@ -194,7 +194,7 @@ function refreshData(action,id){
         done: done,
     });
 }
-$('#editModal').on('show.bs.modal', function (event) {
+$('#updateModal').on('show.bs.modal', function (event) {
     debugger;
     var button = $(event.relatedTarget) // Button that triggered the modal
     var recipient = button.data('id') // Extract info from data-* attributes
@@ -216,8 +216,9 @@ function markUp(id,title,desc) {
             ${desc}
         </div>
         <hr>
-        <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
         <button type="button" class="btn btn-success btn-sm btn-block updatebtn" data-toggle="modal" data-target="#updateModal" data-action="add">Update</button>
+        <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
+        
     </div>
 </div>
 <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>`
