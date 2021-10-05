@@ -135,7 +135,7 @@ function refreshData(action,id){
     }
     $(".todo .items .card").each(function(e,k){
         let tempID = $(k).attr("id")
-        let ret = {"id":tempID,"title":$.trim($("#id-name").val()),"description":$.trim($(k).find(".description").text())}
+        let ret = {"id":tempID,"title":$.trim($(k).find(".card-title div").text()),"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
                 todo.push(ret)
@@ -148,7 +148,7 @@ function refreshData(action,id){
    
     $(".inprogress .items .card").each(function(e,k){
         let tempID = $(k).attr("id")
-        let ret = {"id":tempID,"title":$.trim($("#id-name").val()),"description":$.trim($(k).find(".description").text())}
+        let ret = {"id":tempID,"title":$.trim($(k).find(".card-title div").text()),"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
                 inprogress.push(ret)
@@ -159,7 +159,7 @@ function refreshData(action,id){
     })
     $(".testing .items .card").each(function(e,k){
         let tempID = $(k).attr("id")
-        let ret = {"id":tempID,"title":$.trim($("#id-name").val()),"description":$.trim($(k).find(".description").text())}
+        let ret = {"id":tempID,"title":$.trim($(k).find(".card-title div").text()),"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
                 testing.push(ret)
@@ -170,7 +170,7 @@ function refreshData(action,id){
     })
     $(".done .items .card").each(function(e,k){
         let tempID = $(k).attr("id")
-        let ret = {"id":tempID,"title":$.trim($("#id-name").val()),"description":$.trim($(k).find(".description").text())}
+        let ret = {"id":tempID,"title":$.trim($(k).find(".card-title div").text()),"description":$.trim($(k).find(".description").text())}
         if (action == "delete"){
             if(tempID!=id){
                 done.push(ret)
