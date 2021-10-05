@@ -33,7 +33,7 @@ refreshData();
 }
 const deleteItem = (id) => {
     let currentID = $("#deleteModal").data("id")
-    refreshData("delete",id);
+    refreshData("delete",currentID);
 }
 const addItem = (id) => {
     refreshData("add",latestIndex);
