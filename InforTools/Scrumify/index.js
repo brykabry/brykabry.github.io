@@ -43,6 +43,8 @@ const addItem = (id) => {
 }
 const updateItem = (id) => {
     refreshData("update",latestIndex);
+    $("#editModal #id-name").val("");
+    $("#editModal #desc-text").val("");
     $("#editModal #closebtn").click()
 
 }
@@ -215,7 +217,7 @@ function markUp(id,title,desc) {
         </div>
         <hr>
         <button class="btn btn-danger btn-sm btn-block deletebtn" onclick="deleteItem('${id}')">Delete</button>
-        <button class="btn btn-success btn-sm btn-block updatebtn" onclick="updateItem('${id}')">Update</button>
+        <button type="button" class="btn btn-success btn-sm btn-block updatebtn" data-toggle="modal" data-target="#updateModal" data-action="add">Update</button>
     </div>
 </div>
 <div class="dropzone rounded" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="clearDrop(event)"> &nbsp; </div>`
