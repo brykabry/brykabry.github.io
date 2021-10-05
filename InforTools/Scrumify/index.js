@@ -85,9 +85,11 @@ function unwrap(node) {
 // get
 let urlParams = new URLSearchParams(window.location.search);
 let scrum = urlParams.get('scrum') ? urlParams.get('scrum') : "test"
+let latestIndex = ''
 let idArray = [] 
 firebase.database().ref(scrum).on('value', function(snapshot) {
     let data = snapshot.val();
+    latestIndex = data.latestIndex;
     $(".headertitle").html("Scrumify-"+scrum);
     if (typeof data != "undefined" && data != null){
         idArray = data.idcollection;
@@ -136,6 +138,7 @@ function refreshData(action,id){
         let ret = {"id":id[0],"description":$.trim(id[1])}
         todo.push(ret)
         idcollection.push(id[0])
+        latestIndex++
 
     }
     $(".todo .items .card").each(function(e,k){
@@ -193,6 +196,7 @@ function refreshData(action,id){
         }
     })
     firebase.database().ref(scrum).set({
+        latestIndex : latestIndex,
         idcollection: idcollection,
         todo: todo,
         inprogress: inprogress,
